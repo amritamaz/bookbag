@@ -1,0 +1,11 @@
+#bookbag
+
+bookbag is a command line tool for managing lists of books read and to read. it comes with a pretty-page generator for easy viewing. 
+
+## how to use
+1. add your CSV lists of books to read and finished, or use mine
+2. run `python bookbot.py` to interact with the tool
+3. run `python prettybook.py` to generate HTML views of the lists
+
+## requirements
+python
