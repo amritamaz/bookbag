@@ -81,8 +81,13 @@ while choice != 0:
 		book_format = input("Format? (book,ebook,etc)\n")
 
 
-		if any(((author in k) and (title in k)) for k in to_read):
-			# find where it is in to_read and delete it
+		if any(((author in k) or (title in k)) for k in to_read):
+			for b in to_read:
+				if author in b or title in b:
+					check = input("Would you like to delete "+str(b[0])+" by "+str(b[1])+" (y/n)") 
+					if check == 'y':
+						to_read.remove(b)
+						break
 
 		finished.append([title,author,date,pages,style,genre,book_format,
 						difficulty,enjoyment,gender,poc])
