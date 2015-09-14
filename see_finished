@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python prettybook.py finished.csv > finished.html && open finished.html

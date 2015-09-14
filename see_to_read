@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python prettybook.py to_read.csv > to_read.html && open to_read.html
