@@ -14,3 +14,4 @@ python, mac
 ## TODO
 * get more info from an API so user enters less data
 * make open webpage work on linux
+* web interface for bookbot??
