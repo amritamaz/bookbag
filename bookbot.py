@@ -74,9 +74,8 @@ while choice != 0:
 		gender = input("Non-male author? (Y/N)\n")
 		poc = input("POC author? (Y/N)\n")
 		difficulty = input("Difficulty? (/5)\n")
-		style = input("Fiction or Non-fiction? (N/F)\n")
 		enjoyment = input("Enjoyment? (/5)\n")
-		difficulty = input("Difficulty? (/5)\n")
+		style = input("Fiction or Non-fiction? (N/F)\n")
 		genre = input("Genre? \n")
 		book_format = input("Format? (book,ebook,etc)\n")
 
