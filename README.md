@@ -13,5 +13,6 @@ python, mac
 
 ## TODO
 * get more info from an API so user enters less data
+* add search to bookbot
 * make open webpage work on linux
 * web interface for bookbot??
