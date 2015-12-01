@@ -1,6 +1,7 @@
 import time
 import csv
 import pdb
+import random
 
 finished = []
 to_read = []
@@ -30,6 +31,7 @@ while choice != 0:
 	    (2) add/move a book to the finished pile
 	    (3) see the list of finished books
 	    (4) see the list of books to read
+	    (5) pick a book to read
 	    (0) exit
 	    Enter the number for your choice."""
 
@@ -44,6 +46,8 @@ while choice != 0:
 		session = 'print-done'
 	elif choice == 4:
 		session = 'print-to-read'
+	elif choice == 5:
+		session = 'choose'
 	elif choice == 0:
 		break
 	else:
@@ -51,45 +55,74 @@ while choice != 0:
 
 	if session is 'add':
 		print "Adding a new book!"
-		title = input("What is the title?\n")
-		author = input("Who is the author?\n")
-		style = input("Fiction or Non-fiction? (N/F)\n")
-		gender = input("Non-male author? (Y/N)\n")
-		poc = input("POC author? (Y/N)\n")
+		title = raw_input("What is the title?\n")
+		author = raw_input("Who is the author?\n")
+		style = raw_input("Fiction or Non-fiction? (N/F)\n")
+		gender = raw_input("Non-male author? (Y/N)\n")
+		poc = raw_input("POC author? (Y/N)\n")
 
 		to_read.append([title,author,gender,poc,style])
 
 	elif session is 'read':
-		title = input("What is the title?\n")
-		author = input("Who is the author?\n")
+		title = raw_input("What is the title?\n")
+		author = raw_input("Who is the author?\n")
 
-		enter_date = input("Did you finish the book today? (y/n)\n")
+		enter_date = raw_input("Did you finish the book today? (y/n)\n")
 		date = ''
 		if enter_date != 'y' and enter_date != 'Y':
-			date = input("When did you finish it? (MM/DD/YYYY)\n")
+			date = raw_input("When did you finish it? (MM/DD/YYYY)\n")
 		else:
 			date = time.strftime("%m/%d/%Y")
 
-		pages = input("How many pages?\n")
-		gender = input("Non-male author? (Y/N)\n")
-		poc = input("POC author? (Y/N)\n")
-		difficulty = input("Difficulty? (/5)\n")
-		enjoyment = input("Enjoyment? (/5)\n")
-		style = input("Fiction or Non-fiction? (N/F)\n")
-		genre = input("Genre? \n")
-		book_format = input("Format? (book,ebook,etc)\n")
+		pages = raw_input("How many pages?\n")
+		gender = raw_input("Non-male author? (Y/N)\n")
+		poc = raw_input("POC author? (Y/N)\n")
+		difficulty = raw_input("Difficulty? (/5)\n")
+		enjoyment = raw_input("Enjoyment? (/5)\n")
+		style = raw_input("Fiction or Non-fiction? (N/F)\n")
+		genre = raw_input("Genre? \n")
+		book_format = raw_input("Format? (book,ebook,etc)\n")
 
 
 		if any(((author in k) or (title in k)) for k in to_read):
 			for b in to_read:
 				if author in b or title in b:
-					check = input("Would you like to delete "+str(b[0])+" by "+str(b[1])+" (y/n)") 
+					check = raw_input("Would you like to delete "+str(b[0])+" by "+str(b[1])+" (y/n)") 
 					if check == 'y':
 						to_read.remove(b)
 						break
 
 		finished.append([title,author,date,pages,style,genre,book_format,
 						difficulty,enjoyment,gender,poc])
+
+	elif session is 'choose':
+		filt = raw_input("Would you like to filter your choices? (Y/N)\n")
+		if filt == 'Y' or filt == 'y':
+			style = raw_input("Fiction (F), Non-fiction (N), or don't care (X)?\n")
+			gender = raw_input("Non-male (Y), Male (N), or don't care (X)?\n")
+			poc = raw_input("PoC (Y), White (N), or don't care (X)?\n")
+		else:
+			style = 'X'
+			gender = 'X'
+			poc = 'X'
+
+		choosing = True
+		book = None
+		while (choosing):
+			book = random.choice(to_read)
+
+			if style != 'X' and book[4] != style:
+				continue
+
+			if gender != 'X' and book[2] != gender:
+				continue
+
+			if poc != 'X' and book[3] != poc:
+				continue
+
+			choosing = False
+
+		print "\n\nYou should try: %s by %s\n\n" % (book[0], book[1])
 
 	else:
 		print 'Sorry! not supported yet. '
