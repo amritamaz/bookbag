@@ -2,12 +2,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="./bootstrap-table.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./bootstrap-table.js"></script>
+
 <style>
 body{
   text-transform: capitalize;
@@ -17,589 +23,650 @@ body{
 <body>
 <div class="container" style="padding:50px;">
 <center><h1>Books to Read</h1></center>
-<table class="table table-hover table-bordered ">
-<tr><th>Title</th><th> Author</th><th> Style</th><th> Non-male?</th><th> POC?</th></tr>
+<table data-toggle="table"  data-sort-name="name" data-sort-order="desc" class="table table-hover table-bordered ">
+<thead><tr><th data-sortable="true">#</th><th data-sortable="true">Title</th><th data-sortable="true"> Author</th><th data-sortable="true"> Fiction?</th><th data-sortable="true"> Non-male?</th><th data-sortable="true"> POC?</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Born to Run</td><td>Christopher McDougall</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>2</td><td>Racing Weight</td><td>Matt Fitzgerald</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>3</td><td>A Short History of Nearly Everything</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>4</td><td>A Supposedly Fun Thing I’ll Never Do Again: Essays and Arguments</td><td>David Foster Wallace</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>5</td><td>A Vindication of the Rights of Woman</td><td>Mary Wollstonecraft</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>6</td><td>Applied Minds: How Engineers Think </td><td>Guruprasad Madhavan</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>7</td><td>Bacchae</td><td>Euripides</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>8</td><td>bird by bird: some instructions on writing and life</td><td>anne lamott</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>9</td><td>Blood, Bones & Butter (great chef memoir)</td><td>Gabrielle Hamilton</td><td>y</td><td>N</td><td>N</td></tr>
+<tr><td>10</td><td>Bold: How to Go Big, Create Wealth and Impact the World</td><td>Peter H. Diamandis &Steven Kotler</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>11</td><td>Breakout Nations: In Pursuit of the Next Economic Miracles</td><td>Ruchir Sharma</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>12</td><td>Capital</td><td>Karl Marx</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>13</td><td>City of God</td><td>Augustine</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>14</td><td>Civilization and Its Discontent</td><td>Sigmund Freud</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>15</td><td>Confessions</td><td>Augustine</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>16</td><td>Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</td><td>Ed Catmull &Amy Wallace</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>17</td><td>dark night of the soul</td><td>john of the cross</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>18</td><td>Data, A Love Story: How I Gamed Online Dating to Meet My Match</td><td>Amy Webb</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>19</td><td>Dead Ringers: How Outsourcing is Changing How Indians Understand Themselves</td><td>Shehzad Nadeem</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>20</td><td>Dead Wake: The Last Crossing of the Lusitania</td><td>Erik Larson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>21</td><td>Delancey</td><td>Molly Wizenberg</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>22</td><td>Democracy in America</td><td>Alexis de Tocqueville</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>23</td><td>Devil in a White City</td><td>Erik Larson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>24</td><td>Diary of Anais Nin (Vol. I-V)</td><td>Anais Nin</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>25</td><td>Dietland</td><td>Sarai Walker</td><td>F</td><td>N</td><td>N</td></tr>
+<tr><td>26</td><td>Discourse on INequality and Social Contract</td><td>Jean-Jacques Rousseau</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>27</td><td>Discourse on Method and Meditations on First Philosophy</td><td>Rene Descartes</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>28</td><td>Edge of Desire: Recent Art in India </td><td>Chaitanya Sambrani</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>29</td><td>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</td><td>Ashlee Vance</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>30</td><td>Essays</td><td>Michel de Montaigne</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>31</td><td>Filters Against Folly: How To Survive Despite Economists, Ecologists, and the Merely Eloquent </td><td>Garrett Hardin</td><td>n</td><td>n</td><td>N</td></tr>
+<tr><td>32</td><td>Games of Strategy (Fourth Edition) </td><td>Avinash Dixit, Susan Skeath & David H. Reiley, Jr.</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>33</td><td>gender trouble</td><td>judith butler</td><td>Y</td><td>n</td><td>N</td></tr>
+<tr><td>34</td><td>Godel, Escher, Bach</td><td>Douglas Hofstadter</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>35</td><td>Groundwork for the Metaphysics of Morals</td><td>Immanuel Kant</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>36</td><td>Heroides</td><td>Ovid</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>37</td><td>House of Debt: How They (and You) Caused the Great Recession, and How We Can Prevent It from Happening Again</td><td>Atif Mian & Amir Sufi</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>38</td><td>How to Get Lucky: 13 Techniques for Discovering and Taking Advantage of Life’s Good Breaks</td><td>Max Gunther</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>39</td><td>If Not, Winter, Fragments of Sappho</td><td>Sappho</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>40</td><td>Inside the machine : an illustrated introduction to microprocessors and computer architecture</td><td>Jon Stokes</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>41</td><td>Into Thin Air</td><td>John Krakauer</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>42</td><td>Introduction to the Philosophy of History</td><td>Georg Hegel</td><td>n</td><td>n</td><td>N</td></tr>
+<tr><td>43</td><td>Leviathan</td><td>Hobbes</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>44</td><td>Meditations in an Emergency</td><td>Frank O’Hara</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>45</td><td>Metamorphoses</td><td>Ovid</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>46</td><td>Missoula</td><td>Jon Krakauer</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>47</td><td>Nicomachean Ethics</td><td>Aristotle</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>48</td><td>No Ordinary Disruption: The Four Global Forces Breaking All Trends</td><td>Richard Dobbs, James Manyika, &Jonathan Woetzel</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>49</td><td>Obvious Adams: The Story of a Successful Businessman</td><td>Robert Rawls Updegraff</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>50</td><td>odd girl out</td><td>rachel simmons</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>51</td><td>Of Grammatology</td><td>Jacques Derrida</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>52</td><td>On Liberty and Other Essays</td><td>John Stuart Mill</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>53</td><td>On the Genealogy of Morals</td><td>Friedrich Nietszche</td><td>n</td><td>n</td><td>N</td></tr>
+<tr><td>54</td><td>On the Origin of Species</td><td>Charles Darwin</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>55</td><td>Passions Within Reason: The Strategic Role of the Emotions </td><td>Robert H. Frank</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>56</td><td>Pebbles of Perception - how a few good choices make all the difference</td><td>Laurence Endersen</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>57</td><td>Politics</td><td>Aristotle</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>58</td><td>Poorly Made in China: An Insider’s Account of the China Production Game</td><td>Paul Midler</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>59</td><td>Predictably Irrational, Revised and Expanded Edition: The Hidden Forces That Shape Our Decisions </td><td>Dan Ariely</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>60</td><td>Reflections on the Revolution in France</td><td>Edmund Burke</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>61</td><td>Republic</td><td>Plato</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>62</td><td>Risk Savvy: How to Make Good Decisions </td><td>Gerd Gigerenzer</td><td>N</td><td>n</td><td>N</td></tr>
+<tr><td>63</td><td>Sex at Dawn: How We Mate, Why We Stray, and What It Means for Modern Relationships </td><td>Christopher Ryan & Cacilda Jetha</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>64</td><td>Simple Rules: How to Thrive in a Complex World</td><td>Donald Sull &Kathleen M. Eisenhardt</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>65</td><td>Sit Like a Buddha: A Pocket Guide to Meditation </td><td>Lodro Rinzler</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>66</td><td>Start Here: Read Your Way Into 25 Amazing Authors</td><td>Jeff O’Neal, Rebecca Joines Schinsky</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>67</td><td>Tablet and Pen: Literary Landscapes from the Modern Middle East</td><td>Reza Aslan</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>68</td><td>talking from 9 to 5</td><td>deborah tannen</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>69</td><td>Thank You for Smoking</td><td>Christopher Buckly</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>70</td><td>the beauty myth</td><td>naomi wolf</td><td>F</td><td>N</td><td>N</td></tr>
+<tr><td>71</td><td>the bridge called my back</td><td>cherrie l moraga</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>72</td><td>The Checklist Manifesto: How to Get Things Right </td><td>Atul Gawande</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>73</td><td>The Confidence Code: The Science and Art of Self-Assurance — What Women Should Know</td><td>katty kay, claire shipman</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>74</td><td>the curse of the good girl</td><td>rachel simmons</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>75</td><td>The Darwin Economy: Liberty, Competition, and the Common Good </td><td>Robert H. Frank</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>76</td><td>The Descent of Man</td><td>Charles Darwin</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>77</td><td>The Discourses</td><td>Machiavelli</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>78</td><td>The Evolution of War and its Cognitive Foundations  </td><td>John Tooby & Leda Cosmides.</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>79</td><td>The Feminine Mystique</td><td>Betty Friedan</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>80</td><td>The Folly of Fools: The Logic of Deceit and Self-Deception in Human Life </td><td>Robert Trivers</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>81</td><td>The Hour Between Dog and Wolf: Risk Taking, Gut Feelings and the Biology of Boom and Bust </td><td>John Coates</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>82</td><td>The Information</td><td>James Gleick</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>83</td><td>The Interpretation of Dreams</td><td>Sigmund Freud</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>84</td><td>the madwoman in the attic: the woman writer and the nineteenth-century literary imagination</td><td>sandra m. gilbert</td><td>f</td><td>N</td><td>N</td></tr>
+<tr><td>85</td><td>The Medea</td><td>Euripides</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>86</td><td>The New Jim Crow</td><td>Michelle Alexander</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>87</td><td>The Plot Against America </td><td>Phillip Roth</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>88</td><td>The Power of Habit</td><td>Charles Duhigg</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>89</td><td>The Prince</td><td>Machiavelli</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>90</td><td>The Program Era: Postwar Fiction and the Rise of Creative Writing</td><td>Mark McGurl</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>91</td><td>The Red Queen: Sex and the Evolution of Human Nature </td><td>Matt Ridley</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>92</td><td>The Righteous Mind: Why Good People Are Divided by Politics and Religion</td><td>Jonathan Haidt</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>93</td><td>The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies</td><td>Erik Brynjolfsson &Andrew McAfee</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>94</td><td>The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t </td><td>Nate Silver</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>95</td><td>The Symposium</td><td>Plato</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>96</td><td>The Three Marriages: Reimagining Work, Self and Relationship</td><td>David Whyte</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>97</td><td>the winner take all society</td><td>robert h frank</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>98</td><td>The Wright Brothers</td><td>David McCullough </td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>99</td><td>They Told Me Not to Take that Job: Tumult, Betrayal, Heroics, and the Transformation of Lincoln Center</td><td>Reynold Levy</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>100</td><td>Thinking Fast, Thinking Slow</td><td>Daniel Kahneman</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>101</td><td>toyota under fire</td><td>jeffrey liker</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>102</td><td>Undocumented: A Dominican Boy’s Odyssey From a Homeless Shelter to the Ivy League</td><td>Dan-el Padilla Peralta</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>103</td><td>Vij’s at Home: Relax, Honey</td><td>Meeru Dhalwala & Vikram Vij</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>104</td><td>Waterloo: The History of Four Days, Three Armies, and Three Battles</td><td>Bernard Cornwell</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>105</td><td>Wealth of Nations</td><td>Adam Smith</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>106</td><td>What I Talk About When I Talk About Running</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>107</td><td>What Works for Women at Work: Four Patterns Working Women</td><td>Joan C. Williams &Rachel Dempsey</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>108</td><td>When and Where I Enter: The Impact of Black Women on Race and Sex in America</td><td>Paula Giddings</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>109</td><td>Why Nations Fail: The Origins of Power, Prosperity, and Poverty</td><td>Daron Acemoglu & James Robinson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>110</td><td>Writing & Difference </td><td>Jacques Derrida</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>111</td><td>Zealot: Times of Jesus of Nazareth</td><td>Reza Aslan</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>112</td><td>Zero to One: Notes on Startups, or How to Build the Future </td><td>Peter Thiel &Blake Masters</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>113</td><td>A Death in the Family</td><td>James Agee</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>114</td><td>A Heart-Breaking Work of Staggering Genius</td><td>David Eggers</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>115</td><td>a lover’s discourse: fragments</td><td>roland barthes</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>116</td><td>A Walk in the Woods</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>117</td><td>Adapt: Why Success Always Starts with Failure </td><td>Tim Harford</td><td>N</td><td>n</td><td>N</td></tr>
+<tr><td>118</td><td>Against interpretation</td><td>susan sontag</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>119</td><td>At Home: A Short History of Private Life</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>120</td><td>Capital in the Twenty-First Century</td><td>Thomas Piketty</td><td>N</td><td>n</td><td>N</td></tr>
+<tr><td>121</td><td>Citizen</td><td>Claudia Rankine</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>122</td><td>Faster</td><td>James Gleick</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>123</td><td>Feynman </td><td>Jim Ottaviani&Leland Myrick </td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>124</td><td>GEEK SUBLIME </td><td>Vikram Chandra</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>125</td><td>giving notice</td><td>freade kapor klein</td><td>y</td><td>N</td><td>N</td></tr>
+<tr><td>126</td><td>Good Enough to Dream</td><td>Roger Kahn</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>127</td><td>History of the Peloponnesian War</td><td>Thucydides</td><td>N</td><td>n</td><td>N</td></tr>
+<tr><td>128</td><td>how to be a woman</td><td>caitlin moran</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>129</td><td>after visiting friends</td><td>michael hainey</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>130</td><td>Of Orcas and Men</td><td>David Neiwert</td><td>n</td><td>N</td><td>N</td></tr>
+<tr><td>131</td><td>On Photography</td><td>Susan Sontag</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>132</td><td>Soul of a New Machine</td><td>Tracy Kidder</td><td>N</td><td>n</td><td>N</td></tr>
+<tr><td>133</td><td>Steve Jobs</td><td>Walter Isaacson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>134</td><td>styles of radical will</td><td>susan sontag</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>135</td><td>The Innovators</td><td>Walter Isaacson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>136</td><td>The Theory of Political Coalitions </td><td>William H. Riker</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>137</td><td>A Confederacy of Dunces</td><td>John Kennedy Toole</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>138</td><td>A Gun for Sale (aka This Gun for Hire)</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>139</td><td>A Portrait of the Artist as a Young Man</td><td>James Joyce</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>140</td><td>A Prayer for Owen Meany</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>141</td><td>A Tale of Two Cities</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>142</td><td>A Wild Sheep Chase</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>143</td><td>After Dark </td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>144</td><td>Age of Shiva</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>145</td><td>American Chinatown</td><td>Bonnie Tsui</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>146</td><td>An Artist of the Floating World</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>147</td><td>Angela’s Ashes</td><td>Frank McCourt</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>148</td><td>Apple Tree Yard</td><td>Louise Doughty</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>149</td><td>At the Mountains of Madness</td><td>H.P. Lovecraft</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>150</td><td>Atonement </td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>151</td><td>Ax</td><td>Donald E Westlake</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>152</td><td>Basket Case</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>153</td><td>Bleak House</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>154</td><td>Blindness</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>155</td><td>Brideshead Revisited</td><td>Evelyn Waugh</td><td>F</td><td>N</td><td>F</td></tr>
+<tr><td>156</td><td>Cain</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>157</td><td>Carthage</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>158</td><td>china rich girlfriend </td><td>kevin kwan</td><td>N</td><td>y</td><td>F</td></tr>
+<tr><td>159</td><td>Chronicle of a Death Foretold</td><td>Gabriel Garcia Marquez</td><td>n</td><td>Y</td><td>F</td></tr>
+<tr><td>160</td><td>Cities of the Plain</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>161</td><td>City of Devi</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>162</td><td>Cloud Atlas</td><td>David Mitchell</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>163</td><td>Colorless Tsukuru Tazaki</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>164</td><td>Contact</td><td>Carl Sagan</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>165</td><td>crime and punishment</td><td>Fyodor Dostoyevsky</td><td>n</td><td>n</td><td>F</td></tr>
+<tr><td>166</td><td>Dance Dance Dance</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>167</td><td>Daniel Deronda</td><td>George Eliot</td><td>y</td><td>n</td><td>F</td></tr>
+<tr><td>168</td><td>Dark Places</td><td>Gillian Flynn</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>169</td><td>dear life</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>170</td><td>Death of Vishnu</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>171</td><td>Delta of Venus</td><td>Anais Nin</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>172</td><td>Diamond Dust</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>173</td><td>Dirk Gently’s Holistic Detective Agency</td><td>Douglas Adams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>174</td><td>Don QUixote</td><td>Miguel de Cervantes</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>175</td><td>Don't Look Now</td><td>Daphne du Maurier</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>176</td><td>Double Whammy</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>177</td><td>Enduring Love</td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>178</td><td>Ever After of Ashwin Rao</td><td>Padma Viswanathan</td><td>F</td><td>Y</td><td>F</td></tr>
+<tr><td>179</td><td>Everything Is Illuminated </td><td>Jonathan Safran Foer</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>180</td><td>Fantomas</td><td>Marcel Allain & Pierre Souvestre</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>181</td><td>Farewell, my Lovely</td><td>Raymond Chandler</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>182</td><td>For Matrimonial Purposes</td><td>Kavita Daswani</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>183</td><td>Foundation</td><td>Isaac Asimov</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>184</td><td>Freedom</td><td>Jonathan Franzen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>185</td><td>Fury</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>186</td><td>Genesis</td><td>Anonymous</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>187</td><td>Great Expectations</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>188</td><td>Hardboiled Wonderland and the End of the World</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>189</td><td>Haroun and the Sea of Stories</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>190</td><td>Heart of Darkness</td><td>Joseph Conrad</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>191</td><td>Heart-Shaped Box</td><td>Joe Hill</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>192</td><td>Heft</td><td>Liz MOore</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>193</td><td>House of Incest</td><td>Anais Nin</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>194</td><td>House of Leaves</td><td>mark z Danielewski</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>195</td><td>How to be Alone</td><td>Jonathan Franzen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>196</td><td>hymn to demeter</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
+<tr><td>197</td><td>I, Robot</td><td>Isaac Asimov</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>198</td><td>If on a Winter's Night a Traveler </td><td>Italo Calvino</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>199</td><td>Imaginary Homelands</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>200</td><td>In One Person</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>201</td><td>In the Night Season</td><td>Richard Bausch</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>202</td><td>invisible cities</td><td>Italo Calvino</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>203</td><td>Invisible Man</td><td>Ralph Ellison</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>204</td><td>Jack of Spades</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>205</td><td>Job</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
+<tr><td>206</td><td>Joseph Anton</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>207</td><td>Journey to Ithaca</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>208</td><td>Kazuo Ishiguro</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>209</td><td>Kick Ass</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>210</td><td>Lady Chatterley’s Lover</td><td>D.H. Lawrence</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>211</td><td>Last Night in Twisted River</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>212</td><td>Less Than Zero</td><td>Brett Easton Ellis</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>213</td><td>Lovely, Dark, Deep</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>214</td><td>Loving Frank </td><td>Nancy Horan</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>215</td><td>Luckiest Girl Alive</td><td>Jessica Knoll</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>216</td><td>Luka and the Fire of Life</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>217</td><td>Luke/John</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
+<tr><td>218</td><td>Lysistrate</td><td>Aristophanes</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>219</td><td>Middlemarch</td><td>George Eliot</td><td>y</td><td>n</td><td>F</td></tr>
+<tr><td>220</td><td>Middlesex </td><td>Jeffrey Eugenides</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>221</td><td>Midnight's Children</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>222</td><td>Mystic River</td><td>Dennis Lehane</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>223</td><td>Native Tongue</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>224</td><td>Nature Girl</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>225</td><td>Nausea</td><td>Jean-Paul Sartre</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>226</td><td>Neuromancer</td><td>William Gibson</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>227</td><td>Never Let Me Go</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>228</td><td>No Country for Old Men</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>229</td><td>No Safe Place</td><td>Richard North Patterson</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>230</td><td>nobody is ever missing</td><td>catherine lacey</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>231</td><td>Norwegian Wood</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>232</td><td>Nostromo, a Tale of the Seaboard</td><td>Joseph Conrad</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>233</td><td>NW</td><td>Zadie Smith</td><td>Y</td><td>y</td><td>f</td></tr>
+<tr><td>234</td><td>Oliver Twist</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>235</td><td>oresteia</td><td>Aeschylus</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>236</td><td>Oryx and Crake</td><td>Margaret Atwood</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>237</td><td>Our Man in Havana</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>238</td><td>Paradise Lost</td><td>John Milton</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>239</td><td>Possession A Romance</td><td>A.S. Byatt</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>240</td><td>Queen of Babble Gets Hitched</td><td>Meg Cabot</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>241</td><td>Red Harvest</td><td>Dashiell Hammett</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>242</td><td>rendezvous with rama</td><td>Arthur C. Clarke</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>243</td><td>Revolutionary road </td><td>Richard yates</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>244</td><td>Royal Wedding</td><td>Meg Cabot</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>245</td><td>runaway</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>246</td><td>Shadow Tag</td><td>Louise Erdich</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>247</td><td>Shame</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>248</td><td>Sharp Objects</td><td>Gillian Flynn</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>249</td><td>Siddhartha</td><td>Hermann Hesse</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>250</td><td>Skinny Dip</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>251</td><td>Smiley’s People</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>252</td><td>Son’s & Lovers</td><td>D.H. Lawrence</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>253</td><td>Steppenwolf</td><td>Hermann Hesse</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>254</td><td>Story of O</td><td>Anne Desclos</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>255</td><td>Super Spy </td><td>Matt Kindt</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>256</td><td>The Accursed</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>257</td><td>The Alchemist</td><td>Paulo Coelho</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>258</td><td>The Amazing Adventures of Kavalier & Clay</td><td>Michael Chabon</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>259</td><td>the awakening</td><td>kate chopin</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>260</td><td>The Big Clock </td><td>Kenneth Fearing</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>261</td><td>The Cave</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>262</td><td>The Cement Garden</td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>263</td><td>The Collective</td><td>Don Lee</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>264</td><td>The Crossing</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>265</td><td>The Cuckoo’s Calling</td><td>Robert Galbraith</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>266</td><td>The Discoverers</td><td>Daniel J. Boorstin</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>267</td><td>The Divine Comedy</td><td>Dante</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>268</td><td>The English Patient</td><td>Michael ONdaatje</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>269</td><td>The flamethrower</td><td>Rachel kushner</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>270</td><td>the god of small things</td><td>arundhati roy</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>271</td><td>The Goldfinch</td><td>Donna Tartt</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>272</td><td>The Graveyard Book</td><td>Neil Gaiman</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>273</td><td>The Hours</td><td>Michael Cunningham</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>274</td><td>The Ignored</td><td>Bentley Little</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>275</td><td>The Iliad</td><td>Homer</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>276</td><td>The Illusionist</td><td>Dinitia Smith</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>277</td><td>The Inheritance of Loss</td><td>Kiran Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>278</td><td>The Instructions</td><td>Adam Levin</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>279</td><td>the interestings</td><td>meg wolitzer</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>280</td><td>The Lake</td><td>Banana Yoshimoto</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>281</td><td>The last magazine</td><td>Michael Hastings</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>282</td><td>The Last Samurai</td><td>Helen DeWitt</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>283</td><td>The Liars’ Club</td><td>Mary Karr</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>284</td><td>The Lonely Polygamist</td><td>Brady Udall</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>285</td><td>The Long Goodbye</td><td>Raymond Chandler</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>286</td><td>The Lost Landscape</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>287</td><td>the love of a good woman</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>288</td><td>The Martian: A Novel </td><td>Andy Weir</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>289</td><td>The Moor’s Last Sigh</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>290</td><td>The Odyssey</td><td>Homer</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>291</td><td>The Poisonwood Bible</td><td>Barabara Kingsolver</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>292</td><td>The Power & The Glory</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>293</td><td>The Remains of the Day</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>294</td><td>The Road</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>295</td><td>The Rumor</td><td>Elin Hilderbrand</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>296</td><td>The Runaway Jury</td><td>John Grisham</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>297</td><td>The Sacrifice</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>298</td><td>The Satanic Verses</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>299</td><td>The Silkworm</td><td>Robert Galbraith</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>300</td><td>The Sputnik Sweetheart</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>301</td><td>The Spy Who Came In From the Cold</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>302</td><td>The Story of an hour</td><td>kate chopin</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>303</td><td>The Thin Man</td><td>Dashiell Hammett</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>304</td><td>The Toss of a Lemon</td><td>Padma Viswanathan</td><td>F</td><td>Y</td><td>F</td></tr>
+<tr><td>305</td><td>The Trial</td><td>Franz Kafka</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>306</td><td>The Ultimate Hitchhiker’s Guide</td><td>Douglas Adams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>307</td><td>the vacationers</td><td>emma straub</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>308</td><td>The Village Bride of Beverly Hills</td><td>Kavita Daswani</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>309</td><td>The Wind-Up Bird Chronicle</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>310</td><td>Them</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>311</td><td>Tinker Tailor Soldier Spy</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>312</td><td>too much happiness</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>313</td><td>Tow Years Eight Months and Twenty Eight Nights</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>314</td><td>Ulysses</td><td>James Joyce</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>315</td><td>Underworld</td><td>Don DeLillo</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>316</td><td>Veronika Decides to Die</td><td>Paulo Coelho</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>317</td><td>Villette</td><td>Charlotte Bronte</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>318</td><td>We Were the Mulvaneys</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>319</td><td>Werewolves in Their Youth</td><td>Michael Chabon</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>320</td><td>White Noise</td><td>Don DeLillo</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>321</td><td>Why Can't I Be You</td><td>Allie Larkin</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>322</td><td>You Must Remember This</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>323</td><td>Zen and the Art of Motorcycle Maintenance</td><td>Robert M Pirsig</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>324</td><td>Zombie</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>325</td><td>A Better Man</td><td>Leah McLaren</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>326</td><td>A Canticle for Leibowitz</td><td>Walter M. Miller</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>327</td><td>A Firing Offense</td><td>David Ignatius</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>328</td><td>A Gate at the Stairs</td><td>Lorrie Moore</td><td>Y</td><td>N</td><td>f</td></tr>
+<tr><td>329</td><td>A House for Mr. Biswas</td><td>V.S. Naipaul</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>330</td><td>A Patchwork Planet</td><td>Anne Tyler</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>331</td><td>A Perfect Crime</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>332</td><td>A Raisin in the sUN</td><td>lorraine hansberry</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>333</td><td>A River Runs Through It and Other Stories</td><td>Norman MacLean</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>334</td><td>A Short Guide to a Happy Life </td><td>Anna Quindlen</td><td>Y</td><td>N</td><td>f</td></tr>
+<tr><td>335</td><td>A Sight for Sore Eyes</td><td>Ruth Rendell</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>336</td><td>A Suitable Boy</td><td>Vikram Seth</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>337</td><td>A Tale for the Time Being</td><td>Ruth L. ozeki</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>338</td><td>All the Light we cannot see</td><td>Anthony Doerr</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>339</td><td>Among the Ten Thousand Things </td><td>julia pierpont</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>340</td><td>Ancient Shores</td><td>Jack McDevitt</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>341</td><td>Bed</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>342</td><td>Big Machine</td><td>Victor Lavalle</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>343</td><td>Book of Numbers</td><td>Joshua Cohen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>344</td><td>Canopus in Argos</td><td>Doris Lessing</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>345</td><td>Captain Freedom </td><td>G. Xavier Robillard</td><td>n</td><td>N</td><td>F</td></tr>
+<tr><td>346</td><td>Cathedral</td><td>Nelson DeMille</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>347</td><td>Charming Billy</td><td>Alice McDermott</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>348</td><td>Citizens of No Place: An Architechtural Graphic Novel</td><td>Jiminez Lai</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>349</td><td>Close Range: Wyoming Stories</td><td>Annie Proulx</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>350</td><td>Concrete Island</td><td>J.G. Ballard</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>351</td><td>Deliverance </td><td>James Dickey</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>352</td><td>Eeeee Eee Eeee</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>353</td><td>Even Cowgirls Get the Blues</td><td>Tom Robbins</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>354</td><td>Faust</td><td>Johann Wolfgang von Goethe</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>355</td><td>Foucault’s Pendulum</td><td>Umberto Eco</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>356</td><td>Freedomland</td><td>Richard Price</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>357</td><td>Furnace</td><td>Muriel Gray</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>358</td><td>Gilead</td><td>Marilynne Robinson</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>359</td><td>go tell it on the mountain</td><td>james baldwin</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>360</td><td>Golden Notebook</td><td>Doris Lessing</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>361</td><td>Good Omens</td><td>Neil Gaiman & Terry Pratchett</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>362</td><td>Gravity</td><td>Tess Gerritsen</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>363</td><td>Gravity's Rainbow</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>364</td><td>Hannibal</td><td>Thomas Harris</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>365</td><td>How to build a girl</td><td>caitlin moran</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>366</td><td>How to Get Filthy Rich in Rising Asia</td><td>Mohsin Hamid</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>367</td><td>I Am the Messenger</td><td>Markus Zusak</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>368</td><td>I Hotel</td><td>Karen Tei Yamashita</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>369</td><td>In the Lake of the Woods</td><td>Tim O’Brien</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>370</td><td>In the woods</td><td>tana french</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>371</td><td>Lights Out</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>372</td><td>Pressure Drop</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>373</td><td>Revolution #9</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>374</td><td>Jonathan Strange & Mr. Norrell</td><td>Susanna Clarke</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>375</td><td>King Lear</td><td>WIlliam Shakespeare</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>376</td><td>Mason & Dixon</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>377</td><td>Oedipus Rex</td><td>Sophocles</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>378</td><td>Richard yates</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>379</td><td>The Aenied</td><td>Virgil</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>380</td><td>The Crying of Lot 49</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>381</td><td>The Shipping News</td><td>Annie Proulx</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>382</td><td>V</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>383</td><td>War and Peace</td><td>Leo Tolstoy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>384</td><td>Invisible </td><td>Paul Auster</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>385</td><td>Jim the Boy</td><td>Tony Earley</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>386</td><td>Latitude Zero</td><td>Windsor Chorlton</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>387</td><td>Life A Users Manual </td><td>Georges Perec</td><td>n</td><td>n</td><td>F</td></tr>
+<tr><td>388</td><td>Livability </td><td>Jon Raymond</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>389</td><td>Lives of the Monster Dogs</td><td>Kirsten Bakis</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>390</td><td>makers</td><td>Chris Anderson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>391</td><td>men explain things to me</td><td>rebecca solnit</td><td>F</td><td>N</td><td>N</td></tr>
+<tr><td>392</td><td>Mistakes were made (but not by me)</td><td>Carol Tavris &Elliot Aronson</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>393</td><td>Mobius Dick</td><td>Andrew Crumey</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>394</td><td>Mohawk</td><td>Richard Russo</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>395</td><td>Moon and Sixpense</td><td>W. Somerset Maugham</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>396</td><td>Murder in the Museum of Man </td><td>Alfred Alcorn</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>397</td><td>native son</td><td>richard wright</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>398</td><td>Night and the City</td><td>Gerald Kersh</td><td>n</td><td>n</td><td>f</td></tr>
+<tr><td>399</td><td>no name in the street</td><td>james baldwin</td><td>N</td><td>Y</td><td>n</td></tr>
+<tr><td>400</td><td>No One Belongs Here More than You</td><td>Miranda July</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>401</td><td>notes of a native son</td><td>james baldwin</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>402</td><td>One True Thing</td><td>Anna Quindlen</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>403</td><td>Pale Fire </td><td>Vladimir Nabokov</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>404</td><td>Plainsong</td><td>Kent Haruf</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>405</td><td>Poor Charlie’s Almanack</td><td>Peter D. Kaufman &Ed Wexler</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>406</td><td>Pretty Good Number One</td><td>Matthew Amster-Burton</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>407</td><td>Quiet</td><td>Susan Cain</td><td>Y</td><td>N</td><td>n</td></tr>
+<tr><td>408</td><td>Reservation Road</td><td>John Burnham Schwartz</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>409</td><td>self-help inc</td><td>Micki McGee</td><td>Y</td><td>Y</td><td>n</td></tr>
+<tr><td>410</td><td>Shadow and Claw</td><td>Gene Wolf</td><td>n</td><td>n</td><td>f</td></tr>
+<tr><td>411</td><td>Shadow of the Wind</td><td>Carlos Ruiz Zafon</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>412</td><td>Showstopper!</td><td>G. Pascal Zachary</td><td>N</td><td>n</td><td>n</td></tr>
+<tr><td>413</td><td>sister outsider</td><td>audre lorde</td><td>Y</td><td>Y</td><td>n</td></tr>
+<tr><td>414</td><td>Situation and the story</td><td>Vivian Gornick</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>415</td><td>Smilla’s Sense of Snow</td><td>Peter Hoeg</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>416</td><td>Song of Solomon</td><td>Toni MOrrison</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>417</td><td>Still Life With Woodpecker</td><td>Tom Robbins</td><td>N</td><td>n</td><td>F</td></tr>
+<tr><td>418</td><td>Survivor</td><td>Tabitha King</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>419</td><td>Swimming Home</td><td>Deborah Levy</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>420</td><td>Sword and Citadel</td><td>Gene Wolf</td><td>n</td><td>n</td><td>F</td></tr>
+<tr><td>421</td><td>The Art of Fielding</td><td>Chad Harbach</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>422</td><td>The Art of Stillness: Adventures in Going Nowhere</td><td>Pico Iyer</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>423</td><td>The Ask </td><td>Sam Lipsyte</td><td>n</td><td>n</td><td>F</td></tr>
+<tr><td>424</td><td>The Assistant</td><td>Bernard Malamud</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>425</td><td>the bell jar</td><td>sylvia plath</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>426</td><td>the bluest eye</td><td>toni morrison</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>427</td><td>No Quarter: The Battle of the Crater</td><td>Richard Slotkin</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>428</td><td>The Dante Club</td><td>Matthew Pearl</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>429</td><td>The Decameron</td><td>Boccaccio</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>430</td><td>The Devil’s Own Work</td><td>Alan Judd</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>431</td><td>The Dick Gibson Show</td><td>Stanley Elkin</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>432</td><td>The Divers Clothes Lie Empty</td><td>Vendela Vida</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>433</td><td>The Egyptian</td><td>Mika Toimi Waltari</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>434</td><td>The Elegance of the Hedgehog</td><td>Muriel Barbery</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>435</td><td>The English Major </td><td>Jim Harrison</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>436</td><td>The Eye in the Door</td><td>Pat Barker</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>437</td><td>The Family Fang </td><td>Kevin Wilson</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>438</td><td>The Fifties</td><td>David Halberstam</td><td>N</td><td>N</td><td>n</td></tr>
+<tr><td>439</td><td>the fire next time</td><td>james baldwin</td><td>N</td><td>Y</td><td>n</td></tr>
+<tr><td>440</td><td>The Ghost Road</td><td>Pat Barker</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>441</td><td>The Girl in the Road</td><td>Monica Byrne</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>442</td><td>The Good Spy: The Life and Death of Robert Ames</td><td>Kai Bird</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>443</td><td>the great work of your life</td><td>Stephen Cope</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>444</td><td>The Harder They Come</td><td>T. C. Boyle</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>445</td><td>The HIstories</td><td>Herodotus</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>446</td><td>The Housekeeper & the Professor</td><td>Yoko Ogawa</td><td>Y</td><td>Y</td><td>f</td></tr>
+<tr><td>447</td><td>The Karma of Brown Folk</td><td>Vijay Prashad</td><td>N</td><td>Y</td><td>n</td></tr>
+<tr><td>448</td><td>The Lessons of History</td><td>Will Durant & Ariel Durant</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>449</td><td>The Name of the Rose</td><td>Umberto Eco</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>450</td><td>The Poet</td><td>Michael Connelly</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>451</td><td>The Razor’s Edge</td><td>W. Somerset Maugham</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>452</td><td>The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism </td><td>Naoki Higashida</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>453</td><td>The Redbreast</td><td>Jo Nesbo</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>454</td><td>the rise and fall of great powers</td><td>tom rachman</td><td>N</td><td>n</td><td>n</td></tr>
+<tr><td>455</td><td>The Savage Detectives </td><td>Roberto Bolano</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>456</td><td>The second sex</td><td>Simone de beauvoir</td><td>F</td><td>N</td><td>n</td></tr>
+<tr><td>457</td><td>The Sheltering Sky</td><td>Paul Bowles</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>458</td><td>The Shia Revival: How Conflicts within Islam Will Shape the Future</td><td>Vali Nasr</td><td>N</td><td>Y</td><td>n</td></tr>
+<tr><td>459</td><td>The Silent Wife</td><td>A.S.A. Harrison</td><td>Y</td><td>N</td><td>n</td></tr>
+<tr><td>460</td><td>The Souls of Black Folk</td><td>W.E.B. Du Bois</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>461</td><td>The Speed Queen</td><td>Stewart O’Nan</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>462</td><td>The Storied Life of A.j. Fikry</td><td>Gabrielle Zevin</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>463</td><td>The White Tiger</td><td>Aravind Adiga</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>464</td><td>The Woman in White</td><td>Wilkie Collins</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>465</td><td>The Women</td><td>T. C. Boyle</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>466</td><td>There Is A River: The Black Struggle for Freedom in America</td><td>Vincent Harding</td><td>N</td><td>Y</td><td>n</td></tr>
+<tr><td>467</td><td>thieves of manhattan</td><td>Adam Langer</td><td>N</td><td>N</td><td>f</td></tr>
+<tr><td>468</td><td>This Earth of Mankind </td><td>Pramoedya Ananta Toer</td><td>N</td><td>Y</td><td>f</td></tr>
+<tr><td>469</td><td>Three Guineas</td><td>Virginia Woolf</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>470</td><td>Through the Arc of the Rainforest</td><td>Karen Tei Yamashita</td><td>Y</td><td>Y</td><td>f</td></tr>
+<tr><td>471</td><td>To the Lighthouse</td><td>Virginia Woolf</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>472</td><td>we should all be feminists</td><td>chimamanda ngozi adichie</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>473</td><td>When Paris Went Dark</td><td>Ronald C. Rosbottom</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>474</td><td>Where I’m Calling From</td><td>Raymond Carver</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>475</td><td>White Apples</td><td>Jonathan Carroll</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>476</td><td>who says elephants can't dance?</td><td>Louis V. Gerstner Jr.</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>477</td><td>Why Sinatra Matters</td><td>Pete Hamill</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>478</td><td>why so slow</td><td>virginia valian</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>479</td><td>A Rage in Harlem</td><td>Chester B. Himes</td><td>n</td><td>y</td><td>F</td></tr>
+<tr><td>480</td><td>Slouching Towards Bethlehem</td><td>Joan Didion</td><td>y</td><td>N</td><td>F</td></tr>
+<tr><td>481</td><td>The Member of the Wedding</td><td>Carson McCullers</td><td>y</td><td>n</td><td>f</td></tr>
+<tr><td>482</td><td>dracula</td><td>bram stoker</td><td>n</td><td>n</td><td>f</td></tr>
+<tr><td>483</td><td>The Human Comedy</td><td>William Saroyan</td><td>n</td><td>n</td><td>f</td></tr>
+<tr><td>484</td><td>Asleep</td><td>Banana Yoshimoto</td><td>y</td><td>y</td><td>F</td></tr>
+<tr><td>485</td><td>Amrita</td><td>Banana Yoshimoto</td><td>y</td><td>y</td><td>F</td></tr>
+<tr><td>486</td><td>Death in Midsummer and Other Stories</td><td>Yukio Mishima</td><td>y</td><td>y</td><td>F</td></tr>
+<tr><td>487</td><td>The Lover</td><td>Marguerite Duras</td><td>y</td><td>n</td><td>F</td></tr>
+<tr><td>488</td><td>Essays in Idleness and Hôjôki</td><td> Yoshida Kenkō & Kamo no Chōmei,</td><td>n</td><td>y</td><td>n</td></tr>
+<tr><td>489</td><td>Days of Obligation: An Argument with my Mexican Father</td><td>Richard Rodriguez</td><td>n</td><td>Y</td><td>n</td></tr>
+<tr><td>490</td><td>Hunger of Memory: Th Education of Richard Rodriguez</td><td>Richard Rodriguez</td><td>n</td><td>Y</td><td>n</td></tr>
+<tr><td>491</td><td>What Is History?</td><td>Edward Carr</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>492</td><td>Can Man Be Modified?</td><td>Jean Rostand</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>493</td><td>THe Insect World</td><td>J. Henri Fabre</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>494</td><td>The Art of Scientific Investigation</td><td>William I. Beveridge</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>495</td><td>Power without Property</td><td>Adolph A. Berle, Jr</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>496</td><td>10% Happier</td><td>Dan harris</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>497</td><td>Mindless Eating</td><td>Brian Wansink</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>498</td><td>Through the Language Glass</td><td>Guy Deutscher</td><td>n</td><td>n</td><td>n</td></tr>
+<tr><td>499</td><td>Breaking the Mold: Men, Women, and Time in the Corporate World</td><td>Lotte Bailyn</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>500</td><td>Scatter, Adapt, and Remember: How Humans Will Survive a Mass Extinction </td><td>Annalee Newitz</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>501</td><td>Infested: How the Bed Bug Infiltrated Our Bedrooms and Took Over the World</td><td>Brooke Borel</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>502</td><td>Gulp: Adventures on the Alimentary Canal</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>503</td><td>Stiff: The Curious Lives of Human Cadavers</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>504</td><td>Spook: Science Tackles the Afterlife</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>505</td><td>Bonk: The Curious Coupling of Science and Sex</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>506</td><td>Life on Mars</td><td>Tracy K. Smith</td><td>y</td><td>n</td><td>n</td></tr>
+<tr><td>507</td><td>A Working Theory of Love</td><td>Scott Hutchins</td><td>n</td><td>n</td><td>f</td></tr>
+<tr><td>508</td><td>Cracking the Code</td><td>yushmann Khurana and Tahira Kashyap</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>509</td><td>Half of a Yellow Sun</td><td>Chimamanda Ngozi Adichie</td><td>Y</td><td>y</td><td>F</td></tr>
+<tr><td>510</td><td>The Absolutely True Diary of a Part-Time Indian</td><td>Sherman Alexie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>511</td><td>The Just City</td><td>Jo Walton</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>512</td><td>Soy Sauce For Beginners</td><td>Kirstin Chen</td><td>Y</td><td>y</td><td>F</td></tr>
+<tr><td>513</td><td>That Thing Around Your Neck</td><td>Chimamanda Ngozi Adichie</td><td>Y</td><td>y</td><td>F</td></tr>
+<tr><td>514</td><td>The Silo Effect</td><td>Gillian Tett</td><td>Y</td><td>n</td><td>N</td></tr>
+<tr><td>515</td><td>Primates of Park Avenue: A Memoir</td><td>Wednesday Martin</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>516</td><td>Can’t and Won’t</td><td>Lydia Davis</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>517</td><td>On Booze</td><td>F. Scott Fitzgerald</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>518</td><td>H is for Hawk</td><td>Helen Macdonald</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>519</td><td>Prelude to Bruise</td><td>Saeed Jones</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>520</td><td>The Real World of Technology</td><td>Ursula M. Franklin</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>521</td><td>The Mahabharata</td><td>C. Rajagoplachari</td><td>Y</td><td>Y</td><td>Y</td></tr>
+<tr><td>522</td><td>Anandmath</td><td>Bankim Chandra Chatterji</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>523</td><td>Godan</td><td>Munshi Premchand</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>524</td><td>Twilight in Delhi</td><td>Ahmed Ali</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>525</td><td>Aag ka Dariya</td><td>Qurratulain Hyder</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>526</td><td>Baumgartmer’s Bombay</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>527</td><td>The Shadow Lines</td><td>Amitav Ghosh</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>528</td><td>Cutting for Stone</td><td>Abraham Verghese</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>529</td><td>Galileos’ Daughter</td><td>Dava Sobel</td><td>y</td><td>N</td><td>N</td></tr>
+<tr><td>530</td><td>Such A Long Journey</td><td>Rohinton Mistry</td><td>n</td><td>y</td><td>F</td></tr>
+<tr><td>531</td><td>Rubaiyat of Omar Khayyam</td><td></td><td></td><td>Y</td><td></td></tr>
+<tr><td>532</td><td>The Baburnama: Memoirs of Babur, Prince and Emperor</td><td>Babur</td><td>n</td><td>Y</td><td>N</td></tr>
+<tr><td>533</td><td>The Feynman Processor</td><td>Gerard J. Milburn</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>534</td><td>Longitude</td><td>Dava Sobel</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>535</td><td>The Glass Castle</td><td>Jeannette Walls</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>536</td><td>The Conference of the Birds</td><td>Farid ud-Din Attar</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>537</td><td>The Myth of Sisyphus</td><td>Albert Camus</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>538</td><td>The Enchantress of Florence</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>539</td><td>A Fine Balance</td><td>Rohinton Mistry</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>540</td><td>Beyond Belief</td><td>V.S. Naipaul</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>541</td><td>Stumbling On Happiness</td><td>Daniel Gilbert</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>542</td><td>Design as Art</td><td>Bruno Munari</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>543</td><td>What is a Designer</td><td>Norman Potter</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>544</td><td>The Interface: IBM and the Transformation of Corporate Design</td><td>John Harwood</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>545</td><td>Seeing is Forgetting the Name of the Thing One Sees</td><td>Lawrence Weschler</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>546</td><td>Ways of Seeing</td><td>John Berger</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>547</td><td>Six Memos for the Next Millennium</td><td>Italo Calvino</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>548</td><td>The Mezzanine</td><td>Nicholson Baker</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>549</td><td>An Attempt at Exhausting a Place in Paris</td><td>Georges Perec</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>550</td><td>I Seem to Be a Verb</td><td>R. Buckminster Fuller</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>551</td><td>A Pattern Language</td><td>Christopher Alexander, Sara Ishikawa, Murray Silverstein, Max Jacobson, Ingrid Fiksdahl-King, Shlomo Angel</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>552</td><td>The Gift: Creativity and the Artist in the Modern World</td><td>Lewis Hyde</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>553</td><td>The Collected Stories of Lydia Davis</td><td>Lydia Davis</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>554</td><td>Design, Form, and Chaos</td><td>Paul Rand</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>555</td><td>Cameraworks</td><td>Lawrence Weschler</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>556</td><td>Common as Air: Revolution, Art, and Ownership</td><td>Lewis Hyde</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>557</td><td>The Mirror: A History</td><td>Sabine Melchoir-Bonnet</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>558</td><td>Sum: Forty Tales from the Afterlives</td><td>David Eagleman</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>559</td><td>In Praise of Shadows</td><td>Junichiro Tanizaki</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>560</td><td>Angelmaker</td><td>Nick Harkaway</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>561</td><td>A Field Guide to Being Lost</td><td>REbecca Solnit</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>562</td><td>River of Shadows: Eadweard Muybridge and the Technological Wild West</td><td>Rebecca Solnit</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>563</td><td>Essays of E. B. White</td><td>E. B. White</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>564</td><td>Where Good Ideas Come From</td><td>Steven Johnson</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>565</td><td>The Speechwriter: A Brief Education in Politics</td><td>Barton Swaim</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>566</td><td>The Power of Myth</td><td>Joseph Campbell</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>567</td><td>And the Pursuit of Happiness</td><td>Maira Kalman</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>568</td><td>How to Live: Or A Life of Montaigne in One Question and Twenty Attempts at an Answer</td><td>Sarah Bakewell</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>569</td><td>Madness, Rack, and Honey: Collected Lectures</td><td>Mary Ruefle</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>570</td><td>How To Tell When You're Tired: A Brief Examination of Work</td><td>Reg Theriault</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>571</td><td>Fates and Furies</td><td>Lauren Groff</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>572</td><td>Everybody Rise</td><td>Stephanie Clifford</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>573</td><td>Purity</td><td>Jonathan Franzen</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>574</td><td>A Window Opens</td><td>Elisabeth Egan</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>575</td><td>Just My Type</td><td>Simon Garfield</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>576</td><td>Bountiful Instructions for Enlightenment</td><td>Minal Hajratwala</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>577</td><td>Leaving india</td><td>Minal Hajratwala</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>578</td><td>Contours of the Heart: South Asians Map North America</td><td>Minal Hajratwala</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>579</td><td>Love Marriage</td><td>V. V. Ganeshananthan</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>580</td><td>Meditations</td><td>Marcus Aurelius</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>581</td><td>Letters from a Stoic</td><td>Seneca</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>582</td><td>On the Shortness of Life</td><td>Seneca</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>583</td><td>Man's Search for Meaning</td><td>Viktor Frankl</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>584</td><td>48 Laws of Power</td><td>Robert Greene</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>585</td><td>Rules for Radicals</td><td>Saul D. Alinsky</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>586</td><td>The Moral Animal</td><td>Robert Wright</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>587</td><td>Sex on the Brain</td><td>Deborah Blum</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>588</td><td>Sperm Wars</td><td>Robin Baker</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>589</td><td>The Game</td><td>Neil Strauss</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>590</td><td>The God Delusion</td><td>Richard Dawkins</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>591</td><td>The Net Delusion</td><td>Evgeny Morozov</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>592</td><td>Eating Animals</td><td>Jonathan Safran Foer</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>593</td><td>Facing Codependence</td><td>Pia Mellody</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>594</td><td>The Black Swan: The Impact of the Highly Improbable</td><td>Nassim Nicholas Taleb</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>595</td><td>Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</td><td>Nassim Nicholas Taleb</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>596</td><td>The Bed of Procrustes: Philosophical and Practical Aphorisms</td><td>Nassim Nicholas Taleb</td><td>N</td><td>Y</td><td>N</td></tr>
+<tr><td>597</td><td>Candide</td><td>Voltaire</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>598</td><td>Ask the Dust</td><td>John Fante</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>599</td><td>Babbitt</td><td>Sinclair Lewis</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>600</td><td>The Moviegoer</td><td>Walker Percy</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>601</td><td>The Tiger: A True Sotry of Vengeance and Survival</td><td>John Vaillant</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>602</td><td>Letters from a Self-Made Merchant to His Son</td><td>George Horace Lorimer</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>603</td><td>Totto-Chan: The Little Girl at the Window</td><td>Tetsuko Kuroyanagi</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>604</td><td>The Age of the Image: Redefining Literacy in the a World of Screens</td><td>Stephen Apkon</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>605</td><td>The Empathy Exams: Essays</td><td>Leslie Jamison</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>606</td><td>Thanks for the</td><td>Feedback:The Science and Art of Receiving Feedback WellDouglas Stone & Sheila Heen</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>607</td><td>On the Outside Looking Indian</td><td>Rupinder Gill</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>608</td><td>Two Lives</td><td>Vikram Seth</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>609</td><td>Secret Daughter</td><td>Shilpi Somaya Gowda</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>610</td><td>The White TIger</td><td>Aravid Adiga</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>611</td><td>Unknown Erros of Our Lives</td><td>Chitra Banerjee Divakaruni</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>612</td><td>The Joy Luck Club</td><td>Amy Tan</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>613</td><td>A Passage to India</td><td>EM Forster</td><td>Y</td><td>N</td><td>F</td></tr>
+<tr><td>614</td><td>The Taliban Cricket Club</td><td>Timeri N. Murari</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>615</td><td>Breast Stories</td><td>Mahasweta Devi</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>616</td><td>The Leaving of Things</td><td>Jay Antani</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>617</td><td>Fieldnotes from a Catastrophe</td><td>Elizabeth Kolbert</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>618</td><td>Made to Stick: Why Some Ideas Survive and Others Die</td><td>Chip Heath & Dan Heath</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>619</td><td>The ONly WOman in the Room: Why Science is Still a BOys Club</td><td>Eileen Pollack</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>620</td><td>This Town: Two Parties and a Funeral — plus plenty of valet parking! — in America’s Gilded Capital</td><td>Mark Leibovich</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>621</td><td>Widow Basquiat: A Love Story</td><td>Jennifer Clement</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>622</td><td>Zen Flesh, Zen Bones: A Collection of Zen and Pre-Zen Writings</td><td>Paul Reps, Nyogen Senzaki</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>623</td><td>Normal Accidents</td><td></td><td>N</td><td></td><td>N</td></tr>
+<tr><td>624</td><td>The English and Their History</td><td>Robert Tombs</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>625</td><td>Mastering Metrics: The Path from Cause to Effect</td><td>Josha D. Angrist and Jorn-Steffen Pischke</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>626</td><td>The Happiness Hypothesis</td><td>Jonathan Haidt</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>627</td><td>The Lunar Men</td><td>Jenny Uglow</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>628</td><td>The Presentation of Self in Everyday Life</td><td>Erving Goffman</td><td>N</td><td>N</td><td>N</td></tr>
+<tr><td>629</td><td>Clara</td><td>Roberto Blano</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>630</td><td>Hitting Budapest</td><td>NoViolet Bulawayo</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>631</td><td>Whites</td><td>Julie Otsuka</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>632</td><td>Ghosts</td><td>Edwidge Danticat</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>633</td><td>My Good Man</td><td>Eric Gansworth</td><td>N</td><td>Y</td><td>F</td></tr>
+<tr><td>634</td><td>Gold Boy, Emerald Girl</td><td>Yiyun Li</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>635</td><td>Bounty</td><td>George Saunders</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>636</td><td>Snow Crash</td><td>Neal Stephenson</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>637</td><td>Perdido Street Station</td><td>China Mieville</td><td>N</td><td>N</td><td>F</td></tr>
+<tr><td>638</td><td>Lilith's Brood</td><td>Octavia Butler</td><td>Y</td><td>Y</td><td>F</td></tr>
+<tr><td>639</td><td>The Hundred Thousand Kingdoms</td><td>NK Jemisin</td><td>Y</td><td>Y</td><td>F</td></tr>
 
-<tr><td>Born to Run</td><td>Christopher McDougall</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Racing Weight</td><td>Matt Fitzgerald</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>A Short History of Nearly Everything</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>A Supposedly Fun Thing I’ll Never Do Again: Essays and Arguments</td><td>David Foster Wallace</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>A Vindication of the Rights of Woman</td><td>Mary Wollstonecraft</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Applied Minds: How Engineers Think </td><td>Guruprasad Madhavan</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Bacchae</td><td>Euripides</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>bird by bird: some instructions on writing and life</td><td>anne lamott</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Blood, Bones & Butter (great chef memoir)</td><td>Gabrielle Hamilton</td><td>y</td><td>N</td><td>N</td></tr>
-<tr><td>Bold: How to Go Big, Create Wealth and Impact the World</td><td>Peter H. Diamandis &Steven Kotler</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Breakout Nations: In Pursuit of the Next Economic Miracles</td><td>Ruchir Sharma</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Capital</td><td>Karl Marx</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>City of God</td><td>Augustine</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Civilization and Its Discontent</td><td>Sigmund Freud</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Confessions</td><td>Augustine</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</td><td>Ed Catmull &Amy Wallace</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>dark night of the soul</td><td>john of the cross</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Data, A Love Story: How I Gamed Online Dating to Meet My Match</td><td>Amy Webb</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Dead Ringers: How Outsourcing is Changing How Indians Understand Themselves</td><td>Shehzad Nadeem</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Dead Wake: The Last Crossing of the Lusitania</td><td>Erik Larson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Delancey</td><td>Molly Wizenberg</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Democracy in America</td><td>Alexis de Tocqueville</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Devil in a White City</td><td>Erik Larson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Diary of Anais Nin (Vol. I-V)</td><td>Anais Nin</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Dietland</td><td>Sarai Walker</td><td>F</td><td>N</td><td>N</td></tr>
-<tr><td>Discourse on INequality and Social Contract</td><td>Jean-Jacques Rousseau</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Discourse on Method and Meditations on First Philosophy</td><td>Rene Descartes</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Edge of Desire: Recent Art in India </td><td>Chaitanya Sambrani</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</td><td>Ashlee Vance</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Essays</td><td>Michel de Montaigne</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Filters Against Folly: How To Survive Despite Economists, Ecologists, and the Merely Eloquent </td><td>Garrett Hardin</td><td>n</td><td>n</td><td>N</td></tr>
-<tr><td>Games of Strategy (Fourth Edition) </td><td>Avinash Dixit, Susan Skeath & David H. Reiley, Jr.</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>gender trouble</td><td>judith butler</td><td>Y</td><td>n</td><td>N</td></tr>
-<tr><td>Godel, Escher, Bach</td><td>Douglas Hofstadter</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Groundwork for the Metaphysics of Morals</td><td>Immanuel Kant</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Heroides</td><td>Ovid</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>House of Debt: How They (and You) Caused the Great Recession, and How We Can Prevent It from Happening Again</td><td>Atif Mian & Amir Sufi</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>How to Get Lucky: 13 Techniques for Discovering and Taking Advantage of Life’s Good Breaks</td><td>Max Gunther</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>If Not, Winter, Fragments of Sappho</td><td>Sappho</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Inside the machine : an illustrated introduction to microprocessors and computer architecture</td><td>Jon Stokes</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Into Thin Air</td><td>John Krakauer</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Introduction to the Philosophy of History</td><td>Georg Hegel</td><td>n</td><td>n</td><td>N</td></tr>
-<tr><td>Leviathan</td><td>Hobbes</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Meditations in an Emergency</td><td>Frank O’Hara</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Metamorphoses</td><td>Ovid</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Missoula</td><td>Jon Krakauer</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Nicomachean Ethics</td><td>Aristotle</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>No Ordinary Disruption: The Four Global Forces Breaking All Trends</td><td>Richard Dobbs, James Manyika, &Jonathan Woetzel</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Obvious Adams: The Story of a Successful Businessman</td><td>Robert Rawls Updegraff</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>odd girl out</td><td>rachel simmons</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Of Grammatology</td><td>Jacques Derrida</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>On Liberty and Other Essays</td><td>John Stuart Mill</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>On the Genealogy of Morals</td><td>Friedrich Nietszche</td><td>n</td><td>n</td><td>N</td></tr>
-<tr><td>On the Origin of Species</td><td>Charles Darwin</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Passions Within Reason: The Strategic Role of the Emotions </td><td>Robert H. Frank</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Pebbles of Perception - how a few good choices make all the difference</td><td>Laurence Endersen</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Politics</td><td>Aristotle</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Poorly Made in China: An Insider’s Account of the China Production Game</td><td>Paul Midler</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Predictably Irrational, Revised and Expanded Edition: The Hidden Forces That Shape Our Decisions </td><td>Dan Ariely</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Reflections on the Revolution in France</td><td>Edmund Burke</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Republic</td><td>Plato</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Risk Savvy: How to Make Good Decisions </td><td>Gerd Gigerenzer</td><td>N</td><td>n</td><td>N</td></tr>
-<tr><td>Sex at Dawn: How We Mate, Why We Stray, and What It Means for Modern Relationships </td><td>Christopher Ryan & Cacilda Jetha</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Simple Rules: How to Thrive in a Complex World</td><td>Donald Sull &Kathleen M. Eisenhardt</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Sit Like a Buddha: A Pocket Guide to Meditation </td><td>Lodro Rinzler</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Start Here: Read Your Way Into 25 Amazing Authors</td><td>Jeff O’Neal, Rebecca Joines Schinsky</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Tablet and Pen: Literary Landscapes from the Modern Middle East</td><td>Reza Aslan</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>talking from 9 to 5</td><td>deborah tannen</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Thank You for Smoking</td><td>Christopher Buckly</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>the beauty myth</td><td>naomi wolf</td><td>F</td><td>N</td><td>N</td></tr>
-<tr><td>the bridge called my back</td><td>cherrie l moraga</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>The Checklist Manifesto: How to Get Things Right </td><td>Atul Gawande</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Confidence Code: The Science and Art of Self-Assurance — What Women Should Know</td><td>katty kay, claire shipman</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>the curse of the good girl</td><td>rachel simmons</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>The Darwin Economy: Liberty, Competition, and the Common Good </td><td>Robert H. Frank</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Descent of Man</td><td>Charles Darwin</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Discourses</td><td>Machiavelli</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Evolution of War and its Cognitive Foundations  </td><td>John Tooby & Leda Cosmides.</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Feminine Mystique</td><td>Betty Friedan</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>The Folly of Fools: The Logic of Deceit and Self-Deception in Human Life </td><td>Robert Trivers</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Hour Between Dog and Wolf: Risk Taking, Gut Feelings and the Biology of Boom and Bust </td><td>John Coates</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Information</td><td>James Gleick</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Interpretation of Dreams</td><td>Sigmund Freud</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>the madwoman in the attic: the woman writer and the nineteenth-century literary imagination</td><td>sandra m. gilbert</td><td>f</td><td>N</td><td>N</td></tr>
-<tr><td>The Medea</td><td>Euripides</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The New Jim Crow</td><td>Michelle Alexander</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>The Plot Against America </td><td>Phillip Roth</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Power of Habit</td><td>Charles Duhigg</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Prince</td><td>Machiavelli</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Program Era: Postwar Fiction and the Rise of Creative Writing</td><td>Mark McGurl</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Red Queen: Sex and the Evolution of Human Nature </td><td>Matt Ridley</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Righteous Mind: Why Good People Are Divided by Politics and Religion</td><td>Jonathan Haidt</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies</td><td>Erik Brynjolfsson &Andrew McAfee</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t </td><td>Nate Silver</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Symposium</td><td>Plato</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Three Marriages: Reimagining Work, Self and Relationship</td><td>David Whyte</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>the winner take all society</td><td>robert h frank</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Wright Brothers</td><td>David McCullough </td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>They Told Me Not to Take that Job: Tumult, Betrayal, Heroics, and the Transformation of Lincoln Center</td><td>Reynold Levy</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Thinking Fast, Thinking Slow</td><td>Daniel Kahneman</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>toyota under fire</td><td>jeffrey liker</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Undocumented: A Dominican Boy’s Odyssey From a Homeless Shelter to the Ivy League</td><td>Dan-el Padilla Peralta</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Vij’s at Home: Relax, Honey</td><td>Meeru Dhalwala & Vikram Vij</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Waterloo: The History of Four Days, Three Armies, and Three Battles</td><td>Bernard Cornwell</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Wealth of Nations</td><td>Adam Smith</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>What I Talk About When I Talk About Running</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>What Works for Women at Work: Four Patterns Working Women</td><td>Joan C. Williams &Rachel Dempsey</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>When and Where I Enter: The Impact of Black Women on Race and Sex in America</td><td>Paula Giddings</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Why Nations Fail: The Origins of Power, Prosperity, and Poverty</td><td>Daron Acemoglu & James Robinson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Writing & Difference </td><td>Jacques Derrida</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Zealot: Times of Jesus of Nazareth</td><td>Reza Aslan</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Zero to One: Notes on Startups, or How to Build the Future </td><td>Peter Thiel &Blake Masters</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>A Death in the Family</td><td>James Agee</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>A Heart-Breaking Work of Staggering Genius</td><td>David Eggers</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>a lover’s discourse: fragments</td><td>roland barthes</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>A Walk in the Woods</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Adapt: Why Success Always Starts with Failure </td><td>Tim Harford</td><td>N</td><td>n</td><td>N</td></tr>
-<tr><td>Against interpretation</td><td>susan sontag</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>At Home: A Short History of Private Life</td><td>Bill Bryson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Between the World and Me</td><td>Ta-Nehisi Coates</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Capital in the Twenty-First Century</td><td>Thomas Piketty</td><td>N</td><td>n</td><td>N</td></tr>
-<tr><td>Citizen</td><td>Claudia Rankine</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Faster</td><td>James Gleick</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Feynman </td><td>Jim Ottaviani&Leland Myrick </td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>GEEK SUBLIME </td><td>Vikram Chandra</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>giving notice</td><td>freade kapor klein</td><td>y</td><td>N</td><td>N</td></tr>
-<tr><td>Good Enough to Dream</td><td>Roger Kahn</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>History of the Peloponnesian War</td><td>Thucydides</td><td>N</td><td>n</td><td>N</td></tr>
-<tr><td>how to be a woman</td><td>caitlin moran</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>after visiting friends</td><td>michael hainey</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Of Orcas and Men</td><td>David Neiwert</td><td>n</td><td>N</td><td>N</td></tr>
-<tr><td>On Photography</td><td>Susan Sontag</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Soul of a New Machine</td><td>Tracy Kidder</td><td>N</td><td>n</td><td>N</td></tr>
-<tr><td>Steve Jobs</td><td>Walter Isaacson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>styles of radical will</td><td>susan sontag</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>The Innovators</td><td>Walter Isaacson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Theory of Political Coalitions </td><td>William H. Riker</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>A Confederacy of Dunces</td><td>John Kennedy Toole</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Gun for Sale (aka This Gun for Hire)</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Portrait of the Artist as a Young Man</td><td>James Joyce</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Prayer for Owen Meany</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Tale of Two Cities</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Wild Sheep Chase</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>After Dark </td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Age of Shiva</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>American Chinatown</td><td>Bonnie Tsui</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>An Artist of the Floating World</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Angela’s Ashes</td><td>Frank McCourt</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Apple Tree Yard</td><td>Louise Doughty</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>At the Mountains of Madness</td><td>H.P. Lovecraft</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Atonement </td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Ax</td><td>Donald E Westlake</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Basket Case</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Bleak House</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Blindness</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Brideshead Revisited</td><td>Evelyn Waugh</td><td>F</td><td>N</td><td>F</td></tr>
-<tr><td>Cain</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Carthage</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>china rich girlfriend </td><td>kevin kwan</td><td>N</td><td>y</td><td>F</td></tr>
-<tr><td>Chronicle of a Death Foretold</td><td>Gabriel Garcia Marquez</td><td>n</td><td>Y</td><td>F</td></tr>
-<tr><td>Cities of the Plain</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>City of Devi</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Cloud Atlas</td><td>David Mitchell</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Colorless Tsukuru Tazaki</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Contact</td><td>Carl Sagan</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>crazy rich asians </td><td>kevin kwan</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>crime and punishment</td><td>Fyodor Dostoyevsky</td><td>n</td><td>n</td><td>F</td></tr>
-<tr><td>Dance Dance Dance</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Daniel Deronda</td><td>George Eliot</td><td>y</td><td>n</td><td>F</td></tr>
-<tr><td>Dark Places</td><td>Gillian Flynn</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>dear life</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Death of Vishnu</td><td>Manil Suri</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Delta of Venus</td><td>Anais Nin</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Diamond Dust</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Dirk Gently’s Holistic Detective Agency</td><td>Douglas Adams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Don QUixote</td><td>Miguel de Cervantes</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Don't Look Now</td><td>Daphne du Maurier</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Double Whammy</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Enduring Love</td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Ever After of Ashwin Rao</td><td>Padma Viswanathan</td><td>F</td><td>Y</td><td>F</td></tr>
-<tr><td>Everything I Never Told You</td><td>Celeste Ng</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Everything Is Illuminated </td><td>Jonathan Safran Foer</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Fantomas</td><td>Marcel Allain & Pierre Souvestre</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Farewell, my Lovely</td><td>Raymond Chandler</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>For Matrimonial Purposes</td><td>Kavita Daswani</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Foundation</td><td>Isaac Asimov</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Freedom</td><td>Jonathan Franzen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Fury</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Genesis</td><td>Anonymous</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>Great Expectations</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Hardboiled Wonderland and the End of the World</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Haroun and the Sea of Stories</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Heart of Darkness</td><td>Joseph Conrad</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Heart-Shaped Box</td><td>Joe Hill</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Heft</td><td>Liz MOore</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>House of Incest</td><td>Anais Nin</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>House of Leaves</td><td>mark z Danielewski</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>How Should a Person Be</td><td>Sheila Heti</td><td>Y</td><td>N</td><td>f</td></tr>
-<tr><td>How to be Alone</td><td>Jonathan Franzen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>hymn to demeter</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
-<tr><td>I, Robot</td><td>Isaac Asimov</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>If on a Winter's Night a Traveler </td><td>Italo Calvino</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Imaginary Homelands</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>In One Person</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>In the Night Season</td><td>Richard Bausch</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>invisible cities</td><td>Italo Calvino</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Invisible Man</td><td>Ralph Ellison</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Jack of Spades</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Job</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
-<tr><td>Joseph Anton</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Journey to Ithaca</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Kazuo Ishiguro</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Kick Ass</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Lady Chatterley’s Lover</td><td>D.H. Lawrence</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Last Night in Twisted River</td><td>John Irving</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Less Than Zero</td><td>Brett Easton Ellis</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Lovely, Dark, Deep</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Loving Frank </td><td>Nancy Horan</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Luckiest Girl Alive</td><td>Jessica Knoll</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Luka and the Fire of Life</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Luke/John</td><td>Anonymous</td><td>N</td><td>n</td><td>f</td></tr>
-<tr><td>Lysistrate</td><td>Aristophanes</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Middlemarch</td><td>George Eliot</td><td>y</td><td>n</td><td>F</td></tr>
-<tr><td>Middlesex </td><td>Jeffrey Eugenides</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Midnight's Children</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Mystic River</td><td>Dennis Lehane</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Native Tongue</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Nature Girl</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Nausea</td><td>Jean-Paul Sartre</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Neuromancer</td><td>William Gibson</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>Never Let Me Go</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>No Country for Old Men</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>No Safe Place</td><td>Richard North Patterson</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>nobody is ever missing</td><td>catherine lacey</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Norwegian Wood</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Nostromo, a Tale of the Seaboard</td><td>Joseph Conrad</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>NW</td><td>Zadie Smith</td><td>Y</td><td>y</td><td>f</td></tr>
-<tr><td>Oliver Twist</td><td>Charles Dickens</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>oresteia</td><td>Aeschylus</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Oryx and Crake</td><td>Margaret Atwood</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Our Man in Havana</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Paradise Lost</td><td>John Milton</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Possession A Romance</td><td>A.S. Byatt</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Queen of Babble Gets Hitched</td><td>Meg Cabot</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Red Harvest</td><td>Dashiell Hammett</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>rendezvous with rama</td><td>Arthur C. Clarke</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Revolutionary road </td><td>Richard yates</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Royal Wedding</td><td>Meg Cabot</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>runaway</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Shadow Tag</td><td>Louise Erdich</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Shame</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Sharp Objects</td><td>Gillian Flynn</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Siddhartha</td><td>Hermann Hesse</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Skinny Dip</td><td>Carl Hiaasen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Smiley’s People</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Son’s & Lovers</td><td>D.H. Lawrence</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Steppenwolf</td><td>Hermann Hesse</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Story of O</td><td>Anne Desclos</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Super Spy </td><td>Matt Kindt</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Accursed</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Alchemist</td><td>Paulo Coelho</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Amazing Adventures of Kavalier & Clay</td><td>Michael Chabon</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Artist of Disappearance</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>the awakening</td><td>kate chopin</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Big Clock </td><td>Kenneth Fearing</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Cave</td><td>Jose Saramago</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Cement Garden</td><td>Ian McEwan</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Collective</td><td>Don Lee</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Crossing</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Cuckoo’s Calling</td><td>Robert Galbraith</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Discoverers</td><td>Daniel J. Boorstin</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Divine Comedy</td><td>Dante</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The English Patient</td><td>Michael ONdaatje</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The flamethrower</td><td>Rachel kushner</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>the god of small things</td><td>arundhati roy</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Goldfinch</td><td>Donna Tartt</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Graveyard Book</td><td>Neil Gaiman</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Hours</td><td>Michael Cunningham</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Ignored</td><td>Bentley Little</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Iliad</td><td>Homer</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Illusionist</td><td>Dinitia Smith</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Inheritance of Loss</td><td>Kiran Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Instructions</td><td>Adam Levin</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>the interestings</td><td>meg wolitzer</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Lake</td><td>Banana Yoshimoto</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The last magazine</td><td>Michael Hastings</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Last Samurai</td><td>Helen DeWitt</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Liars’ Club</td><td>Mary Karr</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Lonely Polygamist</td><td>Brady Udall</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Long Goodbye</td><td>Raymond Chandler</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Lost Landscape</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>the love of a good woman</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>the lowland</td><td>Jhumpa Lahiri</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Martian: A Novel </td><td>Andy Weir</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Moor’s Last Sigh</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Odyssey</td><td>Homer</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Poisonwood Bible</td><td>Barabara Kingsolver</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Power & The Glory</td><td>Graham Greene</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Remains of the Day</td><td>Kazuo Ishiguro</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Road</td><td>Cormac McCarthy</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Rumor</td><td>Elin Hilderbrand</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Runaway Jury</td><td>John Grisham</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Sacrifice</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Satanic Verses</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Silkworm</td><td>Robert Galbraith</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Sleepwalker’s Guide to Dancing</td><td>Mira Jacob</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Sputnik Sweetheart</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Spy Who Came In From the Cold</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Story of an hour</td><td>kate chopin</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Thin Man</td><td>Dashiell Hammett</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Toss of a Lemon</td><td>Padma Viswanathan</td><td>F</td><td>Y</td><td>F</td></tr>
-<tr><td>The Trial</td><td>Franz Kafka</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Ultimate Hitchhiker’s Guide</td><td>Douglas Adams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>the vacationers</td><td>emma straub</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Village Bride of Beverly Hills</td><td>Kavita Daswani</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Wind-Up Bird Chronicle</td><td>Haruki Murakami</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Them</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Tinker Tailor Soldier Spy</td><td>John Le Carre</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>too much happiness</td><td>alice munro</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Tow Years Eight Months and Twenty Eight Nights</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Ulysses</td><td>James Joyce</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Underworld</td><td>Don DeLillo</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Veronika Decides to Die</td><td>Paulo Coelho</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Villette</td><td>Charlotte Bronte</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>war of the encyclopaedists</td><td>christopher gerald robinson</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>We Were the Mulvaneys</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Werewolves in Their Youth</td><td>Michael Chabon</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>White Noise</td><td>Don DeLillo</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Why Can't I Be You</td><td>Allie Larkin</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>You Must Remember This</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Zen and the Art of Motorcycle Maintenance</td><td>Robert M Pirsig</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Zombie</td><td>Joyce Carol Oates</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>A Better Man</td><td>Leah McLaren</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>A Canticle for Leibowitz</td><td>Walter M. Miller</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Firing Offense</td><td>David Ignatius</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Gate at the Stairs</td><td>Lorrie Moore</td><td>Y</td><td>N</td><td>f</td></tr>
-<tr><td>A House for Mr. Biswas</td><td>V.S. Naipaul</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>A Patchwork Planet</td><td>Anne Tyler</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>A Perfect Crime</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Raisin in the sUN</td><td>lorraine hansberry</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>A River Runs Through It and Other Stories</td><td>Norman MacLean</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>A Short Guide to a Happy Life </td><td>Anna Quindlen</td><td>Y</td><td>N</td><td>f</td></tr>
-<tr><td>A Sight for Sore Eyes</td><td>Ruth Rendell</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>A Suitable Boy</td><td>Vikram Seth</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>A Tale for the Time Being</td><td>Ruth L. ozeki</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>All the Light we cannot see</td><td>Anthony Doerr</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Among the Ten Thousand Things </td><td>julia pierpont</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Ancient Shores</td><td>Jack McDevitt</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Bed</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Big Machine</td><td>Victor Lavalle</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Book of Numbers</td><td>Joshua Cohen</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Canopus in Argos</td><td>Doris Lessing</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Captain Freedom </td><td>G. Xavier Robillard</td><td>n</td><td>N</td><td>F</td></tr>
-<tr><td>Cathedral</td><td>Nelson DeMille</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Charming Billy</td><td>Alice McDermott</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Citizens of No Place: An Architechtural Graphic Novel</td><td>Jiminez Lai</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Close Range: Wyoming Stories</td><td>Annie Proulx</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Concrete Island</td><td>J.G. Ballard</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Deliverance </td><td>James Dickey</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Eeeee Eee Eeee</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Even Cowgirls Get the Blues</td><td>Tom Robbins</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Faust</td><td>Johann Wolfgang von Goethe</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Foucault’s Pendulum</td><td>Umberto Eco</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Freedomland</td><td>Richard Price</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Furnace</td><td>Muriel Gray</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Gilead</td><td>Marilynne Robinson</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>go tell it on the mountain</td><td>james baldwin</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Golden Notebook</td><td>Doris Lessing</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Good Omens</td><td>Neil Gaiman & Terry Pratchett</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Gravity</td><td>Tess Gerritsen</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Gravity's Rainbow</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Hannibal</td><td>Thomas Harris</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>How to build a girl</td><td>caitlin moran</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>How to Get Filthy Rich in Rising Asia</td><td>Mohsin Hamid</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>I Am the Messenger</td><td>Markus Zusak</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>I Hotel</td><td>Karen Tei Yamashita</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>In the Lake of the Woods</td><td>Tim O’Brien</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>In the woods</td><td>tana french</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Lights Out</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Pressure Drop</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Revolution #9</td><td>Peter Abrahams</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Jonathan Strange & Mr. Norrell</td><td>Susanna Clarke</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>King Lear</td><td>WIlliam Shakespeare</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Mason & Dixon</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Oedipus Rex</td><td>Sophocles</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Richard yates</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Shoplifting From American Apparel</td><td>Tao Lin</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Aenied</td><td>Virgil</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Crying of Lot 49</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>The Shipping News</td><td>Annie Proulx</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>V</td><td>Thomas Pynchon</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>War and Peace</td><td>Leo Tolstoy</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Invisible </td><td>Paul Auster</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Jim the Boy</td><td>Tony Earley</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Latitude Zero</td><td>Windsor Chorlton</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Life A Users Manual </td><td>Georges Perec</td><td>n</td><td>n</td><td>F</td></tr>
-<tr><td>Livability </td><td>Jon Raymond</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Lives of the Monster Dogs</td><td>Kirsten Bakis</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>makers</td><td>Chris Anderson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>men explain things to me</td><td>rebecca solnit</td><td>F</td><td>N</td><td>N</td></tr>
-<tr><td>Mistakes were made (but not by me)</td><td>Carol Tavris &Elliot Aronson</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Mobius Dick</td><td>Andrew Crumey</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>Mohawk</td><td>Richard Russo</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>Moon and Sixpense</td><td>W. Somerset Maugham</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>Murder in the Museum of Man </td><td>Alfred Alcorn</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>native son</td><td>richard wright</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>Night and the City</td><td>Gerald Kersh</td><td>n</td><td>n</td><td>f</td></tr>
-<tr><td>no name in the street</td><td>james baldwin</td><td>N</td><td>Y</td><td>n</td></tr>
-<tr><td>No One Belongs Here More than You</td><td>Miranda July</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>notes of a native son</td><td>james baldwin</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>One True Thing</td><td>Anna Quindlen</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Pale Fire </td><td>Vladimir Nabokov</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Plainsong</td><td>Kent Haruf</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Poor Charlie’s Almanack</td><td>Peter D. Kaufman &Ed Wexler</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>Pretty Good Number One</td><td>Matthew Amster-Burton</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>Quiet</td><td>Susan Cain</td><td>Y</td><td>N</td><td>n</td></tr>
-<tr><td>Reservation Road</td><td>John Burnham Schwartz</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>self-help inc</td><td>Micki McGee</td><td>Y</td><td>Y</td><td>n</td></tr>
-<tr><td>Shadow and Claw</td><td>Gene Wolf</td><td>n</td><td>n</td><td>f</td></tr>
-<tr><td>Shadow of the Wind</td><td>Carlos Ruiz Zafon</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>Showstopper!</td><td>G. Pascal Zachary</td><td>N</td><td>n</td><td>n</td></tr>
-<tr><td>sister outsider</td><td>audre lorde</td><td>Y</td><td>Y</td><td>n</td></tr>
-<tr><td>Situation and the story</td><td>Vivian Gornick</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>Smilla’s Sense of Snow</td><td>Peter Hoeg</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>Song of Solomon</td><td>Toni MOrrison</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>Still Life With Woodpecker</td><td>Tom Robbins</td><td>N</td><td>n</td><td>F</td></tr>
-<tr><td>Survivor</td><td>Tabitha King</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Swimming Home</td><td>Deborah Levy</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Sword and Citadel</td><td>Gene Wolf</td><td>n</td><td>n</td><td>F</td></tr>
-<tr><td>The Art of Fielding</td><td>Chad Harbach</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Art of Stillness: Adventures in Going Nowhere</td><td>Pico Iyer</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Ask </td><td>Sam Lipsyte</td><td>n</td><td>n</td><td>F</td></tr>
-<tr><td>The Assistant</td><td>Bernard Malamud</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>the bell jar</td><td>sylvia plath</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>the bluest eye</td><td>toni morrison</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>No Quarter: The Battle of the Crater</td><td>Richard Slotkin</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Dante Club</td><td>Matthew Pearl</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Decameron</td><td>Boccaccio</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Devil’s Own Work</td><td>Alan Judd</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>The Dick Gibson Show</td><td>Stanley Elkin</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Divers Clothes Lie Empty</td><td>Vendela Vida</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Egyptian</td><td>Mika Toimi Waltari</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Elegance of the Hedgehog</td><td>Muriel Barbery</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The English Major </td><td>Jim Harrison</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Eye in the Door</td><td>Pat Barker</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Family Fang </td><td>Kevin Wilson</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Fifties</td><td>David Halberstam</td><td>N</td><td>N</td><td>n</td></tr>
-<tr><td>the fire next time</td><td>james baldwin</td><td>N</td><td>Y</td><td>n</td></tr>
-<tr><td>The Ghost Road</td><td>Pat Barker</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Girl in the Road</td><td>Monica Byrne</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Good Spy: The Life and Death of Robert Ames</td><td>Kai Bird</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>the great work of your life</td><td>Stephen Cope</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Harder They Come</td><td>T. C. Boyle</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The HIstories</td><td>Herodotus</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Housekeeper & the Professor</td><td>Yoko Ogawa</td><td>Y</td><td>Y</td><td>f</td></tr>
-<tr><td>The Karma of Brown Folk</td><td>Vijay Prashad</td><td>N</td><td>Y</td><td>n</td></tr>
-<tr><td>The Lessons of History</td><td>Will Durant & Ariel Durant</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>The Name of the Rose</td><td>Umberto Eco</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Poet</td><td>Michael Connelly</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Razor’s Edge</td><td>W. Somerset Maugham</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism </td><td>Naoki Higashida</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Redbreast</td><td>Jo Nesbo</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>the rise and fall of great powers</td><td>tom rachman</td><td>N</td><td>n</td><td>n</td></tr>
-<tr><td>The Savage Detectives </td><td>Roberto Bolano</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>The second sex</td><td>Simone de beauvoir</td><td>F</td><td>N</td><td>n</td></tr>
-<tr><td>The Sheltering Sky</td><td>Paul Bowles</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>The Shia Revival: How Conflicts within Islam Will Shape the Future</td><td>Vali Nasr</td><td>N</td><td>Y</td><td>n</td></tr>
-<tr><td>The Silent Wife</td><td>A.S.A. Harrison</td><td>Y</td><td>N</td><td>n</td></tr>
-<tr><td>The Souls of Black Folk</td><td>W.E.B. Du Bois</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Speed Queen</td><td>Stewart O’Nan</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>The Storied Life of A.j. Fikry</td><td>Gabrielle Zevin</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The White Tiger</td><td>Aravind Adiga</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>The Woman in White</td><td>Wilkie Collins</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>The Women</td><td>T. C. Boyle</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>There Is A River: The Black Struggle for Freedom in America</td><td>Vincent Harding</td><td>N</td><td>Y</td><td>n</td></tr>
-<tr><td>thieves of manhattan</td><td>Adam Langer</td><td>N</td><td>N</td><td>f</td></tr>
-<tr><td>This Earth of Mankind </td><td>Pramoedya Ananta Toer</td><td>N</td><td>Y</td><td>f</td></tr>
-<tr><td>Three Guineas</td><td>Virginia Woolf</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Through the Arc of the Rainforest</td><td>Karen Tei Yamashita</td><td>Y</td><td>Y</td><td>f</td></tr>
-<tr><td>To the Lighthouse</td><td>Virginia Woolf</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>we should all be feminists</td><td>chimamanda ngozi adichie</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>When Paris Went Dark</td><td>Ronald C. Rosbottom</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Where I’m Calling From</td><td>Raymond Carver</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>White Apples</td><td>Jonathan Carroll</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>who says elephants can't dance?</td><td>Louis V. Gerstner Jr.</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Why Sinatra Matters</td><td>Pete Hamill</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>why so slow</td><td>virginia valian</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>A Rage in Harlem</td><td>Chester B. Himes</td><td>n</td><td>y</td><td>F</td></tr>
-<tr><td>Slouching Towards Bethlehem</td><td>Joan Didion</td><td>y</td><td>N</td><td>F</td></tr>
-<tr><td>The Member of the Wedding</td><td>Carson McCullers</td><td>y</td><td>n</td><td>f</td></tr>
-<tr><td>dracula</td><td>bram stoker</td><td>n</td><td>n</td><td>f</td></tr>
-<tr><td>The Human Comedy</td><td>William Saroyan</td><td>n</td><td>n</td><td>f</td></tr>
-<tr><td>Asleep</td><td>Banana Yoshimoto</td><td>y</td><td>y</td><td>F</td></tr>
-<tr><td>Amrita</td><td>Banana Yoshimoto</td><td>y</td><td>y</td><td>F</td></tr>
-<tr><td>Death in Midsummer and Other Stories</td><td>Yukio Mishima</td><td>y</td><td>y</td><td>F</td></tr>
-<tr><td>The Lover</td><td>Marguerite Duras</td><td>y</td><td>n</td><td>F</td></tr>
-<tr><td>Essays in Idleness and Hôjôki</td><td> Yoshida Kenkō & Kamo no Chōmei,</td><td>n</td><td>y</td><td>n</td></tr>
-<tr><td>Days of Obligation: An Argument with my Mexican Father</td><td>Richard Rodriguez</td><td>n</td><td>Y</td><td>n</td></tr>
-<tr><td>Hunger of Memory: Th Education of Richard Rodriguez</td><td>Richard Rodriguez</td><td>n</td><td>Y</td><td>n</td></tr>
-<tr><td>What Is History?</td><td>Edward Carr</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Can Man Be Modified?</td><td>Jean Rostand</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>THe Insect World</td><td>J. Henri Fabre</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>The Art of Scientific Investigation</td><td>William I. Beveridge</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Power without Property</td><td>Adolph A. Berle, Jr</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>10% Happier</td><td>Dan harris</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Mindless Eating</td><td>Brian Wansink</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Through the Language Glass</td><td>Guy Deutscher</td><td>n</td><td>n</td><td>n</td></tr>
-<tr><td>Breaking the Mold: Men, Women, and Time in the Corporate World</td><td>Lotte Bailyn</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Scatter, Adapt, and Remember: How Humans Will Survive a Mass Extinction </td><td>Annalee Newitz</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Infested: How the Bed Bug Infiltrated Our Bedrooms and Took Over the World</td><td>Brooke Borel</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Gulp: Adventures on the Alimentary Canal</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Stiff: The Curious Lives of Human Cadavers</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Spook: Science Tackles the Afterlife</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Bonk: The Curious Coupling of Science and Sex</td><td>Mary Roach</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>Life on Mars</td><td>Tracy K. Smith</td><td>y</td><td>n</td><td>n</td></tr>
-<tr><td>A Working Theory of Love</td><td>Scott Hutchins</td><td>n</td><td>n</td><td>f</td></tr>
-<tr><td>Cracking the Code</td><td>yushmann Khurana and Tahira Kashyap</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Half of a Yellow Sun</td><td>Chimamanda Ngozi Adichie</td><td>Y</td><td>y</td><td>F</td></tr>
-<tr><td>The Absolutely True Diary of a Part-Time Indian</td><td>Sherman Alexie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Just City</td><td>Jo Walton</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Soy Sauce For Beginners</td><td>Kirstin Chen</td><td>Y</td><td>y</td><td>F</td></tr>
-<tr><td>That Thing Around Your Neck</td><td>Chimamanda Ngozi Adichie</td><td>Y</td><td>y</td><td>F</td></tr>
-<tr><td>The Silo Effect</td><td>Gillian Tett</td><td>Y</td><td>n</td><td>N</td></tr>
-<tr><td>Primates of Park Avenue: A Memoir</td><td>Wednesday Martin</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Can’t and Won’t</td><td>Lydia Davis</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>On Booze</td><td>F. Scott Fitzgerald</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>H is for Hawk</td><td>Helen Macdonald</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Prelude to Bruise</td><td>Saeed Jones</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Real World of Technology</td><td>Ursula M. Franklin</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>The Mahabharata</td><td>C. Rajagoplachari</td><td>Y</td><td>Y</td><td>Y</td></tr>
-<tr><td>Anandmath</td><td>Bankim Chandra Chatterji</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Godan</td><td>Munshi Premchand</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Twilight in Delhi</td><td>Ahmed Ali</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Aag ka Dariya</td><td>Qurratulain Hyder</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Baumgartmer’s Bombay</td><td>Anita Desai</td><td>Y</td><td>Y</td><td>F</td></tr>
-<tr><td>The Shadow Lines</td><td>Amitav Ghosh</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Cutting for Stone</td><td>Abraham Verghese</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Galileos’ Daughter</td><td>Dava Sobel</td><td>y</td><td>N</td><td>N</td></tr>
-<tr><td>Such A Long Journey</td><td>Rohinton Mistry</td><td>n</td><td>y</td><td>F</td></tr>
-<tr><td>Rubaiyat of Omar Khayyam</td><td></td><td></td><td>Y</td><td></td></tr>
-<tr><td>The Baburnama: Memoirs of Babur, Prince and Emperor</td><td>Babur</td><td>n</td><td>Y</td><td>N</td></tr>
-<tr><td>The Feynman Processor</td><td>Gerard J. Milburn</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Longitude</td><td>Dava Sobel</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>The Glass Castle</td><td>Jeannette Walls</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>The Conference of the Birds</td><td>Farid ud-Din Attar</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>The Myth of Sisyphus</td><td>Albert Camus</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>The Enchantress of Florence</td><td>Salman Rushdie</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>A Fine Balance</td><td>Rohinton Mistry</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Beyond Belief</td><td>V.S. Naipaul</td><td>N</td><td>Y</td><td>F</td></tr>
-<tr><td>Stumbling On Happiness</td><td>Daniel Gilbert</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Design as Art</td><td>Bruno Munari</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>What is a Designer</td><td>Norman Potter</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Interface: IBM and the Transformation of Corporate Design</td><td>John Harwood</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Seeing is Forgetting the Name of the Thing One Sees</td><td>Lawrence Weschler</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Ways of Seeing</td><td>John Berger</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Six Memos for the Next Millennium</td><td>Italo Calvino</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Mezzanine</td><td>Nicholson Baker</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>An Attempt at Exhausting a Place in Paris</td><td>Georges Perec</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>I Seem to Be a Verb</td><td>R. Buckminster Fuller</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>A Pattern Language</td><td>Christopher Alexander, Sara Ishikawa, Murray Silverstein, Max Jacobson, Ingrid Fiksdahl-King, Shlomo Angel</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>The Gift: Creativity and the Artist in the Modern World</td><td>Lewis Hyde</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Collected Stories of Lydia Davis</td><td>Lydia Davis</td><td>Y</td><td>N</td><td>F</td></tr>
-<tr><td>Design, Form, and Chaos</td><td>Paul Rand</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Cameraworks</td><td>Lawrence Weschler</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Common as Air: Revolution, Art, and Ownership</td><td>Lewis Hyde</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Mirror: A History</td><td>Sabine Melchoir-Bonnet</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Sum: Forty Tales from the Afterlives</td><td>David Eagleman</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>In Praise of Shadows</td><td>Junichiro Tanizaki</td><td>N</td><td>Y</td><td>N</td></tr>
-<tr><td>Angelmaker</td><td>Nick Harkaway</td><td>N</td><td>N</td><td>F</td></tr>
-<tr><td>A Field Guide to Being Lost</td><td>REbecca Solnit</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>River of Shadows: Eadweard Muybridge and the Technological Wild West</td><td>Rebecca Solnit</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Essays of E. B. White</td><td>E. B. White</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>Where Good Ideas Come From</td><td>Steven Johnson</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Speechwriter: A Brief Education in Politics</td><td>Barton Swaim</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>The Power of Myth</td><td>Joseph Campbell</td><td>N</td><td>N</td><td>N</td></tr>
-<tr><td>And the Pursuit of Happiness</td><td>Maira Kalman</td><td>Y</td><td>Y</td><td>N</td></tr>
-<tr><td>How to Live: Or A Life of Montaigne in One Question and Twenty Attempts at an Answer</td><td>Sarah Bakewell</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>Madness, Rack, and Honey: Collected Lectures</td><td>Mary Ruefle</td><td>Y</td><td>N</td><td>N</td></tr>
-<tr><td>How To Tell When You're Tired: A Brief Examination of Work</td><td>Reg Theriault</td><td>N</td><td>N</td><td>N</td></tr>
-
+</tbody>
 </table>
 </div>
 </body>

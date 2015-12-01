@@ -117,7 +117,6 @@ A Walk in the Woods,Bill Bryson,N,N,N
 Adapt: Why Success Always Starts with Failure ,Tim Harford,N,n,N
 Against interpretation,susan sontag,Y,N,N
 At Home: A Short History of Private Life,Bill Bryson,N,N,N
-Between the World and Me,Ta-Nehisi Coates,N,Y,N
 Capital in the Twenty-First Century,Thomas Piketty,N,n,N
 Citizen,Claudia Rankine,Y,Y,N
 Faster,James Gleick,N,N,N
@@ -163,7 +162,6 @@ City of Devi,Manil Suri,N,Y,F
 Cloud Atlas,David Mitchell,N,N,F
 Colorless Tsukuru Tazaki,Haruki Murakami,N,Y,F
 Contact,Carl Sagan,N,N,F
-crazy rich asians ,kevin kwan,N,Y,F
 crime and punishment,Fyodor Dostoyevsky,n,n,F
 Dance Dance Dance,Haruki Murakami,N,Y,F
 Daniel Deronda,George Eliot,y,n,F
@@ -178,7 +176,6 @@ Don't Look Now,Daphne du Maurier,Y,N,F
 Double Whammy,Carl Hiaasen,N,N,F
 Enduring Love,Ian McEwan,N,N,F
 Ever After of Ashwin Rao,Padma Viswanathan,F,Y,F
-Everything I Never Told You,Celeste Ng,Y,Y,F
 Everything Is Illuminated ,Jonathan Safran Foer,N,N,F
 Fantomas,Marcel Allain & Pierre Souvestre,N,N,F
 "Farewell, my Lovely",Raymond Chandler,N,N,F
@@ -195,7 +192,6 @@ Heart-Shaped Box,Joe Hill,N,N,F
 Heft,Liz MOore,Y,N,F
 House of Incest,Anais Nin,Y,N,F
 House of Leaves,mark z Danielewski,N,N,F
-How Should a Person Be,Sheila Heti,Y,N,f
 How to be Alone,Jonathan Franzen,N,N,F
 hymn to demeter,Anonymous,N,n,f
 "I, Robot",Isaac Asimov,N,N,F
@@ -260,7 +256,6 @@ Super Spy ,Matt Kindt,N,N,F
 The Accursed,Joyce Carol Oates,Y,N,F
 The Alchemist,Paulo Coelho,N,Y,F
 The Amazing Adventures of Kavalier & Clay,Michael Chabon,N,N,F
-The Artist of Disappearance,Anita Desai,Y,Y,F
 the awakening,kate chopin,Y,N,F
 The Big Clock ,Kenneth Fearing,N,N,F
 The Cave,Jose Saramago,N,Y,F
@@ -290,7 +285,6 @@ The Lonely Polygamist,Brady Udall,N,N,F
 The Long Goodbye,Raymond Chandler,N,N,F
 The Lost Landscape,Joyce Carol Oates,Y,N,F
 the love of a good woman,alice munro,Y,N,F
-the lowland,Jhumpa Lahiri,Y,Y,F
 The Martian: A Novel ,Andy Weir,N,N,F
 The Moor’s Last Sigh,Salman Rushdie,N,Y,F
 The Odyssey,Homer,N,N,F
@@ -303,7 +297,6 @@ The Runaway Jury,John Grisham,N,N,F
 The Sacrifice,Joyce Carol Oates,Y,N,F
 The Satanic Verses,Salman Rushdie,N,Y,F
 The Silkworm,Robert Galbraith,Y,N,F
-The Sleepwalker’s Guide to Dancing,Mira Jacob,Y,Y,F
 The Sputnik Sweetheart,Haruki Murakami,N,Y,F
 The Spy Who Came In From the Cold,John Le Carre,N,N,F
 The Story of an hour,kate chopin,Y,N,F
@@ -322,7 +315,6 @@ Ulysses,James Joyce,N,N,F
 Underworld,Don DeLillo,N,N,F
 Veronika Decides to Die,Paulo Coelho,N,Y,F
 Villette,Charlotte Bronte,Y,N,F
-war of the encyclopaedists,christopher gerald robinson,N,N,F
 We Were the Mulvaneys,Joyce Carol Oates,Y,N,F
 Werewolves in Their Youth,Michael Chabon,N,N,F
 White Noise,Don DeLillo,N,N,F
@@ -384,7 +376,6 @@ King Lear,WIlliam Shakespeare,N,N,F
 Mason & Dixon,Thomas Pynchon,N,n,F
 Oedipus Rex,Sophocles,N,N,F
 Richard yates,Tao Lin,N,Y,F
-Shoplifting From American Apparel,Tao Lin,N,Y,F
 The Aenied,Virgil,N,N,F
 The Crying of Lot 49,Thomas Pynchon,N,n,F
 The Shipping News,Annie Proulx,Y,N,F
@@ -577,3 +568,72 @@ And the Pursuit of Happiness,Maira Kalman,Y,Y,N
 How to Live: Or A Life of Montaigne in One Question and Twenty Attempts at an Answer,Sarah Bakewell,Y,N,N
 "Madness, Rack, and Honey: Collected Lectures",Mary Ruefle,Y,N,N
 How To Tell When You're Tired: A Brief Examination of Work,Reg Theriault,N,N,N
+Fates and Furies,Lauren Groff,Y,N,F
+Everybody Rise,Stephanie Clifford,Y,N,F
+Purity,Jonathan Franzen,N,N,F
+A Window Opens,Elisabeth Egan,Y,N,F
+Just My Type,Simon Garfield,N,N,N
+Bountiful Instructions for Enlightenment,Minal Hajratwala,Y,Y,N
+Leaving india,Minal Hajratwala,Y,Y,N
+Contours of the Heart: South Asians Map North America,Minal Hajratwala,Y,Y,F
+Love Marriage,V. V. Ganeshananthan,Y,Y,F
+Meditations,Marcus Aurelius,N,N,N
+Letters from a Stoic,Seneca,N,N,N
+On the Shortness of Life,Seneca,N,N,N
+Man's Search for Meaning,Viktor Frankl,N,N,N
+48 Laws of Power,Robert Greene,N,N,N
+Rules for Radicals,Saul D. Alinsky,N,N,N
+The Moral Animal,Robert Wright,N,N,N
+Sex on the Brain,Deborah Blum,Y,N,N
+Sperm Wars,Robin Baker,N,N,N
+The Game,Neil Strauss,N,N,N
+The God Delusion,Richard Dawkins,N,N,N
+The Net Delusion,Evgeny Morozov,N,N,N
+Eating Animals,Jonathan Safran Foer,N,N,N
+Facing Codependence,Pia Mellody,Y,N,N
+The Black Swan: The Impact of the Highly Improbable,Nassim Nicholas Taleb,N,Y,N
+Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets,Nassim Nicholas Taleb,N,Y,N
+The Bed of Procrustes: Philosophical and Practical Aphorisms,Nassim Nicholas Taleb,N,Y,N
+Candide,Voltaire,N,N,F
+Ask the Dust,John Fante,N,N,F
+Babbitt,Sinclair Lewis,N,N,F
+The Moviegoer,Walker Percy,N,N,F
+The Tiger: A True Sotry of Vengeance and Survival,John Vaillant,N,N,N
+Letters from a Self-Made Merchant to His Son,George Horace Lorimer,N,N,F
+Totto-Chan: The Little Girl at the Window,Tetsuko Kuroyanagi,Y,Y,N
+The Age of the Image: Redefining Literacy in the a World of Screens,Stephen Apkon,N,N,N
+The Empathy Exams: Essays,Leslie Jamison,Y,N,N
+Thanks for the,Feedback:The Science and Art of Receiving Feedback WellDouglas Stone & Sheila Heen,Y,N,N
+On the Outside Looking Indian,Rupinder Gill,Y,Y,F
+Two Lives,Vikram Seth,N,Y,F
+Secret Daughter,Shilpi Somaya Gowda,Y,Y,F
+The White TIger,Aravid Adiga,N,Y,F
+Unknown Erros of Our Lives,Chitra Banerjee Divakaruni,Y,Y,F
+The Joy Luck Club,Amy Tan,Y,Y,F
+A Passage to India,EM Forster,Y,N,F
+The Taliban Cricket Club,Timeri N. Murari,Y,Y,F
+Breast Stories,Mahasweta Devi,Y,Y,F
+The Leaving of Things,Jay Antani,N,Y,F
+Fieldnotes from a Catastrophe,Elizabeth Kolbert,Y,N,N
+Made to Stick: Why Some Ideas Survive and Others Die,Chip Heath & Dan Heath,N,N,N
+The ONly WOman in the Room: Why Science is Still a BOys Club,Eileen Pollack,Y,N,N
+This Town: Two Parties and a Funeral — plus plenty of valet parking! — in America’s Gilded Capital,Mark Leibovich,N,N,N
+Widow Basquiat: A Love Story,Jennifer Clement,Y,N,N
+"Zen Flesh, Zen Bones: A Collection of Zen and Pre-Zen Writings","Paul Reps, Nyogen Senzaki",Y,Y,N
+Normal Accidents,,N,,N
+The English and Their History,Robert Tombs,N,N,N
+Mastering Metrics: The Path from Cause to Effect,Josha D. Angrist and Jorn-Steffen Pischke,N,N,N
+The Happiness Hypothesis,Jonathan Haidt,N,N,N
+The Lunar Men,Jenny Uglow,Y,N,N
+The Presentation of Self in Everyday Life,Erving Goffman,N,N,N
+Clara,Roberto Blano,N,Y,F
+Hitting Budapest,NoViolet Bulawayo,Y,Y,F
+Whites,Julie Otsuka,Y,Y,F
+Ghosts,Edwidge Danticat,Y,Y,F
+My Good Man,Eric Gansworth,N,Y,F
+"Gold Boy, Emerald Girl",Yiyun Li,Y,Y,F
+Bounty,George Saunders,N,N,F
+Snow Crash,Neal Stephenson,N,N,F
+Perdido Street Station,China Mieville,N,N,F
+Lilith's Brood,Octavia Butler,Y,Y,F
+The Hundred Thousand Kingdoms,NK Jemisin,Y,Y,F
