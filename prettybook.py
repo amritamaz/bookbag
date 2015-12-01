@@ -19,12 +19,18 @@ if 'finished' in sys.argv[1]:
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="./bootstrap-table.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./bootstrap-table.js"></script>
+
 <style>
 body{
   text-transform: capitalize;
@@ -34,8 +40,9 @@ body{
 <body>
 <div class="container" style="padding:50px;">
 <center><h1>Finished Books</h1></center>
-<table class="table table-hover table-bordered ">
-<tr><th>Title</th><th> Author</th><th> Date<</th><th> Pages</th><th> Style</th><th> Genre</th><th> Format</th><th> Difficulty (/5)</th><th> Enjoyment (/5)</th><th> Non-male?</th><th> POC?</th></tr>
+<table data-toggle="table" data-sort-name="name" data-sort-order="desc" class="table table-hover table-bordered ">
+<thead><tr><th data-sortable="true">#</th><th data-sortable="true">Title</th><th data-sortable="true"> Author</th><th data-sortable="true"> Date<</th><th data-sortable="true"> Pages</th><th data-sortable="true"> Style</th><th data-sortable="true"> Genre</th><th> Format</th><th> Difficulty (/5)</th><th> Enjoyment (/5)</th><th> Non-male?</th><th> POC?</th></tr></thead>
+<tbody>
 
 '''
 
@@ -44,12 +51,18 @@ else:
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="./bootstrap-table.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./bootstrap-table.js"></script>
+
 <style>
 body{
   text-transform: capitalize;
@@ -59,36 +72,13 @@ body{
 <body>
 <div class="container" style="padding:50px;">
 <center><h1>Books to Read</h1></center>
-<table class="table table-hover table-bordered ">
-<tr><th>Title</th><th> Author</th><th> Style</th><th> Non-male?</th><th> POC?</th></tr>
-
+<table data-toggle="table"  data-sort-name="name" data-sort-order="desc" class="table table-hover table-bordered ">
+<thead><tr><th data-sortable="true">#</th><th data-sortable="true">Title</th><th data-sortable="true"> Author</th><th data-sortable="true"> Fiction?</th><th data-sortable="true"> Non-male?</th><th data-sortable="true"> POC?</th></tr></thead>
+<tbody>
 '''
 
-# header_string = '''
-# <html>
-# <head>
-# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-# <!-- Optional theme -->
-# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-# <!-- Latest compiled and minified JavaScript -->
-# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-# <style>
-# body{
-#   text-transform: capitalize;
-# }
-# </style>
-# </head>
-# <body>
-# <div class="container" style="padding:50px;">
-# <center><h1>Finished Books</h1></center>
-# <table class="table table-hover table-bordered ">
-# <tr><th>Title</th><th> Author</th><th> Date<</th><th> Pages</th><th> Style</th><th> Genre</th><th> Format</th><th> Difficulty (/5)</th><th> Enjoyment (/5)</th><th> Non-male?</th><th> POC?</th></tr>
-
-# '''
-
 footer_string = '''
+</tbody>
 </table>
 </div>
 </body>
@@ -99,10 +89,11 @@ footer_string = '''
 with open( sys.argv[ 1 ], 'rb') as csvfile:
     table_string = ""
     reader       = csv.reader( csvfile )
-    
+    count = 0
     for row in reader:
+        count = count + 1
         table_string += "<tr>" + \
-                          "<td>" + \
+                          "<td>"+str(count)+"</td><td>" + \
                               string.join( row, "</td><td>" ) + \
                           "</td>" + \
                         "</tr>\n"
