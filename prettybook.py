@@ -1,4 +1,4 @@
-
+import pdb
 import sys
 import os
 import csv
@@ -41,7 +41,7 @@ body{
 <div class="container" style="padding:50px;">
 <center><h1>Finished Books</h1></center>
 <table data-toggle="table" data-sort-name="name" data-sort-order="desc" class="table table-hover table-bordered ">
-<thead><tr><th data-sortable="true">#</th><th data-sortable="true">Title</th><th data-sortable="true"> Author</th><th data-sortable="true"> Date<</th><th data-sortable="true"> Pages</th><th data-sortable="true"> Style</th><th data-sortable="true"> Genre</th><th> Format</th><th> Difficulty (/5)</th><th> Enjoyment (/5)</th><th> Non-male?</th><th> POC?</th></tr></thead>
+<thead><tr><th data-sortable="true">#</th><th data-sortable="true">Title</th><th data-sortable="true"> Author</th><th data-sortable="true"> Date<</th><th data-sortable="true"> Pages</th><th data-sortable="true"> Style</th><th data-sortable="true"> Genre</th><th> Format</th><th> Difficulty (/5)</th><th> Enjoyment (/5)</th><th> Non-male?</th><th> POC?</th><th>Cumulative Pages</th></tr></thead>
 <tbody>
 
 '''
@@ -86,12 +86,13 @@ footer_string = '''
 '''
 
 
-with open( sys.argv[ 1 ], 'rb') as csvfile:
+with open( sys.argv[ 1 ], 'rU') as csvfile:
     table_string = ""
     reader       = csv.reader( csvfile )
     count = 0
     for row in reader:
         count = count + 1
+        # pdb.set_trace()
         table_string += "<tr>" + \
                           "<td>"+str(count)+"</td><td>" + \
                               string.join( row, "</td><td>" ) + \
