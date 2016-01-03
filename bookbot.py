@@ -61,6 +61,15 @@ while choice != 0:
 		gender = raw_input("Non-male author? (Y/N)\n")
 		poc = raw_input("POC author? (Y/N)\n")
 
+		if any(((author in k) or (title in k)) for k in to_read):
+			for b in to_read:
+				if author in b or title in b:
+					check = raw_input("Would you like to overwrite "+str(b[0])+" by "+str(b[1])+" (y/n)") 
+					if check == 'y':
+						to_read.remove(b)
+						break
+
+
 		to_read.append([title,author,gender,poc,style])
 
 	elif session is 'read':
